@@ -91,7 +91,9 @@ namespace Puissance_4_Groupe_B
             this.lblMJ1.Name = "lblMJ1";
             this.lblMJ1.Size = new System.Drawing.Size(84, 89);
             this.lblMJ1.TabIndex = 10;
+            this.lblMJ1.Tag = "a";
             this.lblMJ1.Text = "<";
+            this.lblMJ1.Click += new System.EventHandler(this.update_pion);
             // 
             // lblMJ2
             // 
@@ -101,7 +103,9 @@ namespace Puissance_4_Groupe_B
             this.lblMJ2.Name = "lblMJ2";
             this.lblMJ2.Size = new System.Drawing.Size(84, 89);
             this.lblMJ2.TabIndex = 11;
+            this.lblMJ2.Tag = "c";
             this.lblMJ2.Text = "<";
+            this.lblMJ2.Click += new System.EventHandler(this.update_pion);
             // 
             // lblPJ1
             // 
@@ -111,7 +115,9 @@ namespace Puissance_4_Groupe_B
             this.lblPJ1.Name = "lblPJ1";
             this.lblPJ1.Size = new System.Drawing.Size(84, 89);
             this.lblPJ1.TabIndex = 12;
+            this.lblPJ1.Tag = "b";
             this.lblPJ1.Text = ">";
+            this.lblPJ1.Click += new System.EventHandler(this.update_pion);
             // 
             // lblPJ2
             // 
@@ -121,7 +127,9 @@ namespace Puissance_4_Groupe_B
             this.lblPJ2.Name = "lblPJ2";
             this.lblPJ2.Size = new System.Drawing.Size(84, 89);
             this.lblPJ2.TabIndex = 13;
+            this.lblPJ2.Tag = "d";
             this.lblPJ2.Text = ">";
+            this.lblPJ2.Click += new System.EventHandler(this.update_pion);
             // 
             // rdoJ1
             // 
