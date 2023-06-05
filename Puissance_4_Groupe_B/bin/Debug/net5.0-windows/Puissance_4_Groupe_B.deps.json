@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "Puissance_4_Groupe_B/1.0.0": {
+        "dependencies": {
+          "Jeu": "1.0.0"
+        },
         "runtime": {
           "Puissance_4_Groupe_B.dll": {}
+        }
+      },
+      "Jeu/1.0.0": {
+        "runtime": {
+          "Jeu.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Puissance_4_Groupe_B/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Jeu/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

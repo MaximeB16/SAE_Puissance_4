@@ -1,4 +1,5 @@
 ﻿using System;
+using Jeu;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace Puissance_4_Groupe_B
 {
     public partial class TailleGrille : Form
     {
+        
+        internal Grille PartieSuivante;
         public TailleGrille()
         {
             InitializeComponent();
@@ -29,6 +32,25 @@ namespace Puissance_4_Groupe_B
 
         private void open_frmJoueurs(object sender, EventArgs e)
         {
+            int l;
+            int c;
+            Button tmpbtn = (Button)sender;
+            if (tmpbtn.Tag.ToString() == "a")
+            {
+                l = 5;
+                c = 6;
+            }
+            else if (tmpbtn.Tag.ToString() == "c")
+            {
+                l = 6;
+                c = 7;
+            }
+            else
+            {
+                l = 7;
+                c = 9;
+            }
+            PartieSuivante = new Grille(l, c);
             Joueurs frmJ = new Joueurs();
             frmJ.Show(this);
         }

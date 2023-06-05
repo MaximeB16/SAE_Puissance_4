@@ -39,8 +39,9 @@ namespace Puissance_4_Groupe_B
             this.lblPJ2 = new System.Windows.Forms.Label();
             this.rdoJ1 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNomJ1 = new System.Windows.Forms.TextBox();
+            this.txtNomJ2 = new System.Windows.Forms.TextBox();
+            this.btnJouer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picJ1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picJ2)).BeginInit();
             this.SuspendLayout();
@@ -151,33 +152,45 @@ namespace Puissance_4_Groupe_B
             this.radioButton1.TabIndex = 15;
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtNomJ1
             // 
-            this.textBox1.Location = new System.Drawing.Point(121, 188);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Nom J1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNomJ1.Location = new System.Drawing.Point(121, 188);
+            this.txtNomJ1.Name = "txtNomJ1";
+            this.txtNomJ1.PlaceholderText = "Nom J1";
+            this.txtNomJ1.Size = new System.Drawing.Size(100, 23);
+            this.txtNomJ1.TabIndex = 16;
+            this.txtNomJ1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // txtNomJ2
             // 
-            this.textBox2.Location = new System.Drawing.Point(405, 188);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = "Nom J2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 17;
-            this.textBox2.Text = "Connor";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNomJ2.Location = new System.Drawing.Point(405, 188);
+            this.txtNomJ2.Name = "txtNomJ2";
+            this.txtNomJ2.PlaceholderText = "Nom J2";
+            this.txtNomJ2.ReadOnly = true;
+            this.txtNomJ2.Size = new System.Drawing.Size(100, 23);
+            this.txtNomJ2.TabIndex = 17;
+            this.txtNomJ2.Text = "Connor";
+            this.txtNomJ2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnJouer
+            // 
+            this.btnJouer.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnJouer.Location = new System.Drawing.Point(174, 361);
+            this.btnJouer.Name = "btnJouer";
+            this.btnJouer.Size = new System.Drawing.Size(276, 59);
+            this.btnJouer.TabIndex = 18;
+            this.btnJouer.Text = "Jouer !";
+            this.btnJouer.UseVisualStyleBackColor = true;
+            this.btnJouer.Click += new System.EventHandler(this.btnJouer_Click);
             // 
             // Couleurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(621, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnJouer);
+            this.Controls.Add(this.txtNomJ2);
+            this.Controls.Add(this.txtNomJ1);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.rdoJ1);
             this.Controls.Add(this.lblPJ2);
@@ -212,7 +225,8 @@ namespace Puissance_4_Groupe_B
         private System.Windows.Forms.Label lblPJ2;
         private System.Windows.Forms.RadioButton rdoJ1;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNomJ1;
+        private System.Windows.Forms.TextBox txtNomJ2;
+        private System.Windows.Forms.Button btnJouer;
     }
 }

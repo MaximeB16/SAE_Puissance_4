@@ -118,17 +118,41 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Grille7x9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Grille7x9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Joueur_VS_Joueur" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Joueur_VS_Joueur.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Joueur_VS_IA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Joueur_VS_IA.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PionVioletBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PionVioletBase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PionOrangeBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PionOrangeBase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PionRougeBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PionRougeBase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Grille6x7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Grille6x7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PionBleuBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PionBleuBase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PionVertClaireBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PionVertClaireBase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PionVioletBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PionVioletBase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PionJauneBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PionJauneBase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PionVertBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PionVertBase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Grille5x6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Grille5x6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PionCyanBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PionCyanBase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,22 +160,7 @@
   <data name="PionRoseBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PionRoseBase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PionJauneBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PionJauneBase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PionRougeBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PionRougeBase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PionOrangeBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PionOrangeBase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Grille5x6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Grille5x6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Grille6x7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Grille6x7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Grille7x9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Grille7x9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ImgAuréol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgAuréol.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

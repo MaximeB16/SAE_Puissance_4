@@ -31,14 +31,8 @@ namespace Puissance_4_Groupe_B
         {
             this.btnRetour = new System.Windows.Forms.Button();
             this.lblJoueur = new System.Windows.Forms.Label();
-            this.grpJvJ = new System.Windows.Forms.GroupBox();
-            this.picJvJ = new System.Windows.Forms.PictureBox();
-            this.grpJvIA = new System.Windows.Forms.GroupBox();
-            this.picJvIA = new System.Windows.Forms.PictureBox();
-            this.grpJvJ.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picJvJ)).BeginInit();
-            this.grpJvIA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picJvIA)).BeginInit();
+            this.btnJvIA = new System.Windows.Forms.Button();
+            this.btnJvJ = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRetour
@@ -61,51 +55,37 @@ namespace Puissance_4_Groupe_B
             this.lblJoueur.Text = "Joueurs";
             this.lblJoueur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // grpJvJ
+            // btnJvIA
             // 
-            this.grpJvJ.Controls.Add(this.picJvJ);
-            this.grpJvJ.Location = new System.Drawing.Point(86, 130);
-            this.grpJvJ.Name = "grpJvJ";
-            this.grpJvJ.Size = new System.Drawing.Size(295, 239);
-            this.grpJvJ.TabIndex = 7;
-            this.grpJvJ.TabStop = false;
-            this.grpJvJ.Text = "J vs J";
+            this.btnJvIA.BackgroundImage = global::Puissance_4_Groupe_B.Properties.Resources.Joueur_VS_IA;
+            this.btnJvIA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnJvIA.Location = new System.Drawing.Point(34, 130);
+            this.btnJvIA.Name = "btnJvIA";
+            this.btnJvIA.Size = new System.Drawing.Size(340, 233);
+            this.btnJvIA.TabIndex = 9;
+            this.btnJvIA.Tag = "b";
+            this.btnJvIA.UseVisualStyleBackColor = true;
+            this.btnJvIA.Click += new System.EventHandler(this.open_frmCouleurs);
             // 
-            // picJvJ
+            // btnJvJ
             // 
-            this.picJvJ.Location = new System.Drawing.Point(7, 23);
-            this.picJvJ.Name = "picJvJ";
-            this.picJvJ.Size = new System.Drawing.Size(282, 210);
-            this.picJvJ.TabIndex = 0;
-            this.picJvJ.TabStop = false;
-            this.picJvJ.Click += new System.EventHandler(this.open_frmCouleurs);
-            // 
-            // grpJvIA
-            // 
-            this.grpJvIA.Controls.Add(this.picJvIA);
-            this.grpJvIA.Location = new System.Drawing.Point(403, 130);
-            this.grpJvIA.Name = "grpJvIA";
-            this.grpJvIA.Size = new System.Drawing.Size(294, 239);
-            this.grpJvIA.TabIndex = 8;
-            this.grpJvIA.TabStop = false;
-            this.grpJvIA.Text = "J vs IA";
-            // 
-            // picJvIA
-            // 
-            this.picJvIA.Location = new System.Drawing.Point(7, 23);
-            this.picJvIA.Name = "picJvIA";
-            this.picJvIA.Size = new System.Drawing.Size(281, 210);
-            this.picJvIA.TabIndex = 0;
-            this.picJvIA.TabStop = false;
-            this.picJvIA.Click += new System.EventHandler(this.open_frmCouleurs);
+            this.btnJvJ.BackgroundImage = global::Puissance_4_Groupe_B.Properties.Resources.Joueur_VS_Joueur;
+            this.btnJvJ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnJvJ.Location = new System.Drawing.Point(417, 130);
+            this.btnJvJ.Name = "btnJvJ";
+            this.btnJvJ.Size = new System.Drawing.Size(340, 233);
+            this.btnJvJ.TabIndex = 10;
+            this.btnJvJ.Tag = "a";
+            this.btnJvJ.UseVisualStyleBackColor = true;
+            this.btnJvJ.Click += new System.EventHandler(this.open_frmCouleurs);
             // 
             // Joueurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.grpJvIA);
-            this.Controls.Add(this.grpJvJ);
+            this.Controls.Add(this.btnJvJ);
+            this.Controls.Add(this.btnJvIA);
             this.Controls.Add(this.lblJoueur);
             this.Controls.Add(this.btnRetour);
             this.Name = "Joueurs";
@@ -113,10 +93,6 @@ namespace Puissance_4_Groupe_B
             this.Text = "Joueurs";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Closed);
             this.Load += new System.EventHandler(this.Joueurs_Load);
-            this.grpJvJ.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picJvJ)).EndInit();
-            this.grpJvIA.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picJvIA)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,9 +101,7 @@ namespace Puissance_4_Groupe_B
 
         private System.Windows.Forms.Button btnRetour;
         private System.Windows.Forms.Label lblJoueur;
-        private System.Windows.Forms.GroupBox grpJvJ;
-        private System.Windows.Forms.PictureBox picJvJ;
-        private System.Windows.Forms.GroupBox grpJvIA;
-        private System.Windows.Forms.PictureBox picJvIA;
+        private System.Windows.Forms.Button btnJvIA;
+        private System.Windows.Forms.Button btnJvJ;
     }
 }

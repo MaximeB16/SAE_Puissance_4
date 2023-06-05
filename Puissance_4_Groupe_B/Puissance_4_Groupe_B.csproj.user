@@ -4,6 +4,12 @@
     <Compile Update="Couleurs.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Resultat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TailleL.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Joueurs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11,6 +17,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="TailleGrille.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TailleM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TailleS.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

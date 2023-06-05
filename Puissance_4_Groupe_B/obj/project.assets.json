@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {}
+    "net5.0-windows7.0": {
+      "Jeu/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Jeu.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Jeu.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Jeu/1.0.0": {
+      "type": "project",
+      "path": "../Jeu/Jeu.csproj",
+      "msbuildProject": "../Jeu/Jeu.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": []
+    "net5.0-windows7.0": [
+      "Jeu >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\b22201330\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Puissance_4_Groupe_B\\Jeu\\Jeu.csproj": {
+              "projectPath": "D:\\Puissance_4_Groupe_B\\Jeu\\Jeu.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

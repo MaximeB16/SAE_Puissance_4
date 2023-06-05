@@ -12,6 +12,7 @@ namespace Puissance_4_Groupe_B
 {
     public partial class Joueurs : Form
     {
+        internal TailleGrille FrmParam;
         public Joueurs()
         {
             InitializeComponent();
@@ -19,6 +20,7 @@ namespace Puissance_4_Groupe_B
 
         private void Joueurs_Load(object sender, EventArgs e)
         {
+            FrmParam = (TailleGrille)this.Owner;
             this.Owner.Hide();
         }
 
@@ -34,6 +36,16 @@ namespace Puissance_4_Groupe_B
 
         private void open_frmCouleurs(object sender, EventArgs e)
         {
+            
+            Button tmpPic = (Button)sender;
+            if (tmpPic.Tag.ToString() == "b")
+            {
+                FrmParam.PartieSuivante.update_NbJ(1);
+            }
+            else if (tmpPic.Tag.ToString() == "a")
+            {
+                FrmParam.PartieSuivante.update_NbJ(2);
+            }
             Couleurs frmC = new Couleurs();
             frmC.Show(this);
         }

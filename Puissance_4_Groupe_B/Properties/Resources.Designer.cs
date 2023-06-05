@@ -93,6 +93,36 @@ namespace Puissance_4_Groupe_B.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ImgAuréol {
+            get {
+                object obj = ResourceManager.GetObject("ImgAuréol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Joueur_VS_IA {
+            get {
+                object obj = ResourceManager.GetObject("Joueur_VS_IA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Joueur_VS_Joueur {
+            get {
+                object obj = ResourceManager.GetObject("Joueur_VS_Joueur", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PionBleuBase {
             get {
                 object obj = ResourceManager.GetObject("PionBleuBase", resourceCulture);
