@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Jeu;
 
 namespace Puissance_4_Groupe_B
 {
     public partial class Joueurs : Form
     {
         internal TailleGrille FrmParam;
+        internal Grille PartieSuivante;
+
         public Joueurs()
         {
             InitializeComponent();
@@ -21,12 +24,13 @@ namespace Puissance_4_Groupe_B
         private void Joueurs_Load(object sender, EventArgs e)
         {
             FrmParam = (TailleGrille)this.Owner;
-            this.Owner.Hide();
+            FrmParam.Hide();
+            PartieSuivante = FrmParam.PartieSuivante;
         }
 
         private void Form_Closed(object sender, FormClosedEventArgs e)
         {
-            this.Owner.Show();
+            FrmParam.Show();
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
@@ -40,11 +44,11 @@ namespace Puissance_4_Groupe_B
             Button tmpPic = (Button)sender;
             if (tmpPic.Tag.ToString() == "b")
             {
-                FrmParam.PartieSuivante.update_NbJ(1);
+                PartieSuivante.update_NbJ(1);
             }
             else if (tmpPic.Tag.ToString() == "a")
             {
-                FrmParam.PartieSuivante.update_NbJ(2);
+                PartieSuivante.update_NbJ(2);
             }
             Couleurs frmC = new Couleurs();
             frmC.Show(this);

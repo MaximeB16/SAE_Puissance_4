@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Jeu;
 
 namespace Puissance_4_Groupe_B
 {
     public partial class TailleS : Form
     {
         internal Couleurs FrmParam;
+        internal Grille PartieSuivante;
+
         public TailleS()
         {
             InitializeComponent();
@@ -21,32 +24,32 @@ namespace Puissance_4_Groupe_B
         private void TailleS_Load(object sender, EventArgs e)
         {
             FrmParam = (Couleurs)this.Owner;
-            Couleurs FrmPion = (Couleurs)Owner;
-            this.Owner.Hide();
-            FrmParam.FrmParam.FrmParam.PartieSuivante.restart();
-            picJ1.Image = FrmPion.Pions_Basique[FrmPion.pion1];
-            picJ2.Image = FrmPion.Pions_Basique[FrmPion.pion2];
-            lblJ1.Text = FrmParam.FrmParam.FrmParam.PartieSuivante.get_NomJ1();
-            lblJ2.Text = FrmParam.FrmParam.FrmParam.PartieSuivante.get_NomJ2();
+            FrmParam.Hide();
+            PartieSuivante = FrmParam.PartieSuivante;
+            PartieSuivante.restart();
+            picJ1.Image = FrmParam.Pions_Basique[FrmParam.pion1];
+            picJ2.Image = FrmParam.Pions_Basique[FrmParam.pion2];
+            lblJ1.Text = PartieSuivante.get_NomJ1();
+            lblJ2.Text = PartieSuivante.get_NomJ2();
         }
 
         private void Coup(int c)
         {
-            Couleurs FrmPion = (Couleurs)this.Owner;
-            System.Drawing.Bitmap pionJ1 = FrmPion.Pions_Basique[FrmPion.pion1];
-            System.Drawing.Bitmap pionJ2 = FrmPion.Pions_Basique[FrmPion.pion2];
+            Couleurs FrmParam = (Couleurs)this.Owner;
+            Bitmap pionJ1 = FrmParam.Pions_Basique[FrmParam.pion1];
+            Bitmap pionJ2 = FrmParam.Pions_Basique[FrmParam.pion2];
             PictureBox[,] GrilleJeu = { { pic00, pic01, pic02, pic03, pic04, pic05 }, { pic10, pic11, pic12, pic13, pic14, pic15 }, { pic20, pic21, pic22, pic23, pic24, pic25 }, { pic30, pic31, pic32, pic33, pic34, pic35 }, { pic40, pic41, pic42, pic43, pic44, pic45 } };
-            if (FrmParam.FrmParam.FrmParam.PartieSuivante.case_la_plus_basse(c) >= 0)
+            if (PartieSuivante.case_la_plus_basse(c) >= 0)
             {
-                if (FrmParam.FrmParam.FrmParam.PartieSuivante.get_Tour())
+                if (PartieSuivante.get_Tour())
                 {
-                    GrilleJeu[FrmParam.FrmParam.FrmParam.PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ1;
+                    GrilleJeu[PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ1;
                 }
                 else
                 {
-                    GrilleJeu[FrmParam.FrmParam.FrmParam.PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ2;
+                    GrilleJeu[PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ2;
                 }
-                int fin = FrmParam.FrmParam.FrmParam.PartieSuivante.coup(c);
+                int fin = PartieSuivante.coup(c);
                 if (fin != 0)
                 {
                     Resultat frmR = new Resultat();
@@ -89,7 +92,7 @@ namespace Puissance_4_Groupe_B
 
         private void TailleS_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Owner.Show();
+            FrmParam.Show();
         }
     }
 }

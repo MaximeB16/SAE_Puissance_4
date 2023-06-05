@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Jeu;
 
 namespace Puissance_4_Groupe_B
 {
     public partial class Couleurs : Form
     {
         internal Joueurs FrmParam;
-        internal System.Drawing.Bitmap[] Pions_Basique = { Properties.Resources.PionRougeBase, Properties.Resources.PionJauneBase, Properties.Resources.PionCyanBase, Properties.Resources.PionBleuBase, Properties.Resources.PionRoseBase, Properties.Resources.PionVertBase, Properties.Resources.PionVertClaireBase, Properties.Resources.PionVioletBase };
+        internal Grille PartieSuivante;
+        internal Bitmap[] Pions_Basique = { Properties.Resources.PionRougeBase, Properties.Resources.PionJauneBase, Properties.Resources.PionCyanBase, Properties.Resources.PionBleuBase, Properties.Resources.PionRoseBase, Properties.Resources.PionVertBase, Properties.Resources.PionVertClaireBase, Properties.Resources.PionVioletBase };
         internal int pion1 = 0;
         internal int pion2 = 1;
 
@@ -30,8 +32,9 @@ namespace Puissance_4_Groupe_B
         private void Couleurs_Load(object sender, EventArgs e)
         {
             FrmParam = (Joueurs)this.Owner;
-            this.Owner.Hide();
-            if (FrmParam.FrmParam.PartieSuivante.get_Nb_Joueurs() == 2)
+            FrmParam.Hide();
+            PartieSuivante = FrmParam.PartieSuivante;
+            if (PartieSuivante.get_Nb_Joueurs() == 2)
             {
                 txtNomJ2.ReadOnly = false;
             }
@@ -98,21 +101,21 @@ namespace Puissance_4_Groupe_B
         {
             if (pion1 != pion2 && txtNomJ1.Text != txtNomJ2.Text)
             {
-                FrmParam.FrmParam.PartieSuivante.update_NomJ(txtNomJ1.Text, txtNomJ2.Text);
+                PartieSuivante.update_NomJ(txtNomJ1.Text, txtNomJ2.Text);
 
-                FrmParam.FrmParam.PartieSuivante.set_tour(rdoJ1.Checked);
+                PartieSuivante.set_tour(rdoJ1.Checked);
 
-                if (FrmParam.FrmParam.PartieSuivante.get_Lignes() == 4)
+                if (PartieSuivante.get_Lignes() == 4)
                 {
                     TailleS FrmJ = new TailleS();
                     FrmJ.Show(this);
                 }
-                else if (FrmParam.FrmParam.PartieSuivante.get_Lignes() == 5)
+                else if (PartieSuivante.get_Lignes() == 5)
                 {
                     TailleM FrmJ = new TailleM();
                     FrmJ.Show(this);
                 }
-                else if (FrmParam.FrmParam.PartieSuivante.get_Lignes() == 6)
+                else if (PartieSuivante.get_Lignes() == 6)
                 {
                     TailleL FrmJ = new TailleL();
                     FrmJ.Show(this);

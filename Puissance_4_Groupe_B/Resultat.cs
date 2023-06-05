@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Jeu;
 
 namespace Puissance_4_Groupe_B
 {
     public partial class Resultat : Form
     {
         internal Couleurs FrmParam;
+        internal Grille PartieSuivante;
+
         public Resultat()
         {
             InitializeComponent();
@@ -20,19 +23,20 @@ namespace Puissance_4_Groupe_B
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmParam = (Couleurs)this.Owner;
-            FrmParam.FrmParam.FrmParam.PartieSuivante.restart();
+            PartieSuivante.restart();
             this.Close();
         }
 
         private void Resultat_Load(object sender, EventArgs e)
         {
-            this.Owner.Hide();
+            FrmParam = (Couleurs)this.Owner;
+            FrmParam.Hide();
+            PartieSuivante = FrmParam.PartieSuivante;
         }
 
         private void Resultat_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Owner.Show();
+            FrmParam.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
