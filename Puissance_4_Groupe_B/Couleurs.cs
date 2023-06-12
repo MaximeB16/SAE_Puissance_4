@@ -13,8 +13,10 @@ namespace Puissance_4_Groupe_B
 {
     public partial class Couleurs : Form
     {
+        internal int fin;
         internal Joueurs FrmParam;
         internal Grille PartieSuivante;
+        internal bool mode_sombre;
         internal Bitmap[] Pions_Basique = { Properties.Resources.PionRougeBase, Properties.Resources.PionJauneBase, Properties.Resources.PionCyanBase, Properties.Resources.PionBleuBase, Properties.Resources.PionRoseBase, Properties.Resources.PionVertBase, Properties.Resources.PionVertClaireBase, Properties.Resources.PionVioletBase };
         internal int pion1 = 0;
         internal int pion2 = 1;
@@ -32,11 +34,30 @@ namespace Puissance_4_Groupe_B
         private void Couleurs_Load(object sender, EventArgs e)
         {
             FrmParam = (Joueurs)this.Owner;
+            mode_sombre = FrmParam.mode_sombre;
             FrmParam.Hide();
             PartieSuivante = FrmParam.PartieSuivante;
             if (PartieSuivante.get_Nb_Joueurs() == 2)
             {
                 txtNomJ2.ReadOnly = false;
+            }
+            if (mode_sombre)
+            {
+                this.BackColor = Color.FromArgb(29, 29, 29);
+                foreach (Control sect in this.Controls)
+                {
+                    sect.ForeColor = Color.FromArgb(240, 240, 240);
+                    sect.BackColor = Color.FromArgb(29, 29, 29);
+                }
+            }
+            else
+            {
+                this.BackColor = Color.White;
+                foreach (Control sect in this.Controls)
+                {
+                    sect.ForeColor = Color.Black;
+                    sect.BackColor = Color.White;
+                }
             }
         }
 
@@ -47,7 +68,7 @@ namespace Puissance_4_Groupe_B
 
         private void update_pion(object sender, EventArgs e)
         {
-            Label lblTemp = (Label)sender;
+            PictureBox lblTemp = (PictureBox)sender;
             if( lblTemp.Tag.ToString()=="a")
             {
                 if (pion1 == 0)

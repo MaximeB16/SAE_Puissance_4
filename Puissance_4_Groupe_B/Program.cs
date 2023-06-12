@@ -17,7 +17,7 @@ namespace Puissance_4_Groupe_B
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
+            Application.Run(new FrmMenu());
         }
     }
 }

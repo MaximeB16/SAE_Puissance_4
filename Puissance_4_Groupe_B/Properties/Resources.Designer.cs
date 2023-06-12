@@ -63,6 +63,26 @@ namespace Puissance_4_Groupe_B.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fleche_droite {
+            get {
+                object obj = ResourceManager.GetObject("fleche_droite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fleche_gauche {
+            get {
+                object obj = ResourceManager.GetObject("fleche_gauche", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Grille5x6 {
             get {
                 object obj = ResourceManager.GetObject("Grille5x6", resourceCulture);

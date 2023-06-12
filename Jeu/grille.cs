@@ -16,6 +16,7 @@ namespace Jeu
         private int Lignes;
         private int Colonnes;
         private bool Tour;
+        private bool Partie_fini = false;
 
         public Grille(int l, int c)
         {
@@ -38,6 +39,11 @@ namespace Jeu
             }
         }
 
+        public int[,] get_grille()
+        {
+            return grille;
+        }
+
         public void restart()
         {
             Nb_Coups_Jouer = 0;
@@ -54,9 +60,18 @@ namespace Jeu
             }
         }
 
+        public bool get_est_fini()
+        {
+            return Partie_fini;
+        }
+
         public void set_tour(bool y)
         {
             Tour = y;
+        }
+        public int get_Nb_Coup_Jouer()
+        {
+            return Nb_Coups_Jouer;
         }
         public int get_Lignes()
         {
@@ -158,6 +173,7 @@ namespace Jeu
             {
                 if (grille[l, c] == grille[l + 1, c] && grille[l + 1, c] == grille[l + 2, c] && grille[l + 2, c] == grille[l + 3, c])
                 {
+                    Partie_fini = true;
                     return 1;
                 }
             }
@@ -189,6 +205,7 @@ namespace Jeu
             }
             if (Pion_Align >= 4)
             {
+                Partie_fini = true;
                 return 1;
             }
 
@@ -224,6 +241,7 @@ namespace Jeu
             }
             if (Pion_Align >= 4)
             {
+                Partie_fini = true;
                 return 1;
             }
 
@@ -263,6 +281,7 @@ namespace Jeu
             }
             if (Nb_Coups_Jouer == ( Lignes+1 ) * ( Colonnes+1 ) )
             {
+                Partie_fini = true;
                 return -1;
             }
             return 0;
@@ -280,6 +299,130 @@ namespace Jeu
                 ProchainTour();
             }
             return verif;
+        }
+
+        public int TourIA()
+        {
+            int meilleurCoup = 0;
+            if (Tour && !Partie_fini)
+            {
+                meilleurCoup = TrouverMeilleurCoup();
+                if (meilleurCoup != -1)
+                    coup(meilleurCoup);
+            }
+            return meilleurCoup;
+        }
+
+        public int EvaluerEtat()
+        {
+            if (Partie_fini)
+            {
+                if (Tour)
+                {
+                    Partie_fini = true;
+                    return -1; // Le joueur 2 a gagné
+                }
+                else
+                {
+                    Partie_fini = true;
+                    return 1; // Le joueur 1 a gagné
+                }
+            }
+            else
+                return 0; // Match nul ou partie en cours
+        }
+
+        public int Minimax(int profondeur, bool joueurMax)
+        {
+            int score = EvaluerEtat();
+
+            if (score != 0 || profondeur == 0)
+                return score;
+
+            if (joueurMax)
+            {
+                int meilleurScore = int.MinValue;
+
+                for (int col = 0; col <= Colonnes; col++)
+                {
+                    if (case_basse[col] != -1)
+                    {
+                        int ligne = case_basse[col];
+
+                        grille[ligne, col] = 1;
+                        case_basse[col]--;
+                        Nb_Coups_Jouer++;
+
+                        int scoreActuel = Minimax(profondeur - 1, !joueurMax);
+
+                        grille[ligne, col] = 0;
+                        case_basse[col]++;
+                        Nb_Coups_Jouer--;
+
+                        meilleurScore = Math.Max(meilleurScore, scoreActuel);
+                    }
+                }
+
+                return meilleurScore;
+            }
+            else
+            {
+                int meilleurScore = int.MaxValue;
+
+                for (int col = 0; col <= Colonnes; col++)
+                {
+                    if (case_basse[col] != -1)
+                    {
+                        int ligne = case_basse[col];
+
+                        grille[ligne, col] = 2;
+                        case_basse[col]--;
+                        Nb_Coups_Jouer++;
+
+                        int scoreActuel = Minimax(profondeur - 1, joueurMax);
+
+                        grille[ligne, col] = 0;
+                        case_basse[col]++;
+                        Nb_Coups_Jouer--;
+
+                        meilleurScore = Math.Min(meilleurScore, scoreActuel);
+                    }
+                }
+
+                return meilleurScore;
+            }
+        }
+
+        public int TrouverMeilleurCoup()
+        {
+            int meilleurScore = int.MinValue;
+            int meilleurCoup = -1;
+
+            for (int col = 0; col <= Colonnes; col++)
+            {
+                if (case_basse[col] != -1)
+                {
+                    int ligne = case_basse[col];
+
+                    grille[ligne, col] = 1;
+                    case_basse[col]--;
+                    Nb_Coups_Jouer++;
+
+                    int scoreActuel = Minimax(5, false); // Profondeur maximale de l'algorithme MinMax
+
+                    grille[ligne, col] = 0;
+                    case_basse[col]++;
+                    Nb_Coups_Jouer--;
+
+                    if (scoreActuel > meilleurScore)
+                    {
+                        meilleurScore = scoreActuel;
+                        meilleurCoup = col;
+                    }
+                }
+            }
+
+            return meilleurCoup;
         }
     }
 }

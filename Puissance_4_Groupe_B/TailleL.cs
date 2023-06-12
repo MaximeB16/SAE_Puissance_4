@@ -15,6 +15,7 @@ namespace Puissance_4_Groupe_B
     {
         internal Couleurs FrmParam;
         internal Grille PartieSuivante;
+        internal bool mode_sombre;
 
         public TailleL()
         {
@@ -25,12 +26,25 @@ namespace Puissance_4_Groupe_B
         {
             FrmParam = (Couleurs)this.Owner;
             FrmParam.Hide();
+            mode_sombre = FrmParam.mode_sombre;
             PartieSuivante = FrmParam.PartieSuivante;
             PartieSuivante.restart();
             picJ1.Image = FrmParam.Pions_Basique[FrmParam.pion1];
             picJ2.Image = FrmParam.Pions_Basique[FrmParam.pion2];
             lblJ1.Text = PartieSuivante.get_NomJ1();
             lblJ2.Text = PartieSuivante.get_NomJ2();
+            if (mode_sombre)
+            {
+                this.BackColor = Color.FromArgb(29, 29, 29);
+                lblJ1.ForeColor = Color.FromArgb(240, 240, 240);
+                lblJ2.ForeColor = Color.FromArgb(240, 240, 240);
+            }
+            else
+            {
+                this.BackColor = Color.White;
+                lblJ1.ForeColor = Color.Black;
+                lblJ2.ForeColor = Color.Black;
+            }
         }
 
         private void Coup(int c)

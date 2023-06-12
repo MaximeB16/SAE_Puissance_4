@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "doIa58+54c5ySPddVfinDU8fzqqLPGQjkTD2kjabp92Xpa1YT4WcT1EtiH2llr+5glra7QcM/dZ7lX5Sre0Jww==",
+  "dgSpecHash": "rhBhJPpcu0aGrk25r9RXyxlidjK+gsUNNEDgeKtE6is4qFdLgUFTby0hPnaPHMkxk80m9ZPjRk1jFbtvM9M2pQ==",
   "success": true,
-  "projectFilePath": "D:\\Puissance_4_Groupe_B\\Jeu\\Jeu.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Maxime\\Downloads\\SAE_Puissance_4-master\\Jeu\\Jeu.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Maxime\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Maxime\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Maxime\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
   "logs": []
 }

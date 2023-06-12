@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace Puissance_4_Groupe_B
 {
-    public partial class Menu : Form
+    public partial class FrmMenu : Form
     {
-        public Menu()
+        internal bool mode_sombre = false;
+
+        public FrmMenu()
         {
             InitializeComponent();
         }
@@ -26,6 +28,33 @@ namespace Puissance_4_Groupe_B
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            mode_sombre = !mode_sombre;
+            if (mode_sombre)
+            {
+                this.BackColor = Color.FromArgb(29, 29, 29);
+                foreach(Control sect in this.Controls)
+                {
+                    sect.ForeColor = Color.FromArgb(240, 240, 240);
+                    sect.BackColor = Color.FromArgb(29, 29, 29);
+                }
+                button1.BackColor = Color.FromArgb(240, 240, 240);
+                button1.ForeColor = Color.FromArgb(29, 29, 29);
+            }
+            else
+            {
+                this.BackColor = Color.White;
+                foreach (Control sect in this.Controls)
+                {
+                    sect.ForeColor = Color.Black;
+                    sect.BackColor = Color.White;
+                }
+                button1.BackColor = Color.FromArgb(29, 29, 29);
+                button1.ForeColor = Color.White;
+            }
         }
     }
 }

@@ -34,24 +34,6 @@ namespace Puissance_4_Groupe_B
             this.picJ2 = new System.Windows.Forms.PictureBox();
             this.picJ1 = new System.Windows.Forms.PictureBox();
             this.pnl1 = new System.Windows.Forms.Panel();
-            this.pic00 = new System.Windows.Forms.PictureBox();
-            this.pic01 = new System.Windows.Forms.PictureBox();
-            this.pic03 = new System.Windows.Forms.PictureBox();
-            this.pic02 = new System.Windows.Forms.PictureBox();
-            this.pic05 = new System.Windows.Forms.PictureBox();
-            this.pic04 = new System.Windows.Forms.PictureBox();
-            this.pic25 = new System.Windows.Forms.PictureBox();
-            this.pic24 = new System.Windows.Forms.PictureBox();
-            this.pic23 = new System.Windows.Forms.PictureBox();
-            this.pic22 = new System.Windows.Forms.PictureBox();
-            this.pic21 = new System.Windows.Forms.PictureBox();
-            this.pic20 = new System.Windows.Forms.PictureBox();
-            this.pic15 = new System.Windows.Forms.PictureBox();
-            this.pic14 = new System.Windows.Forms.PictureBox();
-            this.pic13 = new System.Windows.Forms.PictureBox();
-            this.pic12 = new System.Windows.Forms.PictureBox();
-            this.pic11 = new System.Windows.Forms.PictureBox();
-            this.pic10 = new System.Windows.Forms.PictureBox();
             this.pic35 = new System.Windows.Forms.PictureBox();
             this.pic34 = new System.Windows.Forms.PictureBox();
             this.pic33 = new System.Windows.Forms.PictureBox();
@@ -64,27 +46,27 @@ namespace Puissance_4_Groupe_B
             this.pic42 = new System.Windows.Forms.PictureBox();
             this.pic41 = new System.Windows.Forms.PictureBox();
             this.pic40 = new System.Windows.Forms.PictureBox();
+            this.pic15 = new System.Windows.Forms.PictureBox();
+            this.pic14 = new System.Windows.Forms.PictureBox();
+            this.pic13 = new System.Windows.Forms.PictureBox();
+            this.pic12 = new System.Windows.Forms.PictureBox();
+            this.pic11 = new System.Windows.Forms.PictureBox();
+            this.pic10 = new System.Windows.Forms.PictureBox();
+            this.pic25 = new System.Windows.Forms.PictureBox();
+            this.pic24 = new System.Windows.Forms.PictureBox();
+            this.pic23 = new System.Windows.Forms.PictureBox();
+            this.pic22 = new System.Windows.Forms.PictureBox();
+            this.pic21 = new System.Windows.Forms.PictureBox();
+            this.pic20 = new System.Windows.Forms.PictureBox();
+            this.pic05 = new System.Windows.Forms.PictureBox();
+            this.pic04 = new System.Windows.Forms.PictureBox();
+            this.pic03 = new System.Windows.Forms.PictureBox();
+            this.pic02 = new System.Windows.Forms.PictureBox();
+            this.pic01 = new System.Windows.Forms.PictureBox();
+            this.pic00 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picJ2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picJ1)).BeginInit();
             this.pnl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic00)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic01)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic03)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic02)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic05)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic04)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic33)).BeginInit();
@@ -97,11 +79,29 @@ namespace Puissance_4_Groupe_B
             ((System.ComponentModel.ISupportInitialize)(this.pic42)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic40)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic05)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic04)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic03)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic02)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic01)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic00)).BeginInit();
             this.SuspendLayout();
             // 
             // lblJ2
             // 
-            this.lblJ2.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblJ2.Font = new System.Drawing.Font("Impact", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblJ2.Location = new System.Drawing.Point(566, 12);
             this.lblJ2.Name = "lblJ2";
             this.lblJ2.Size = new System.Drawing.Size(290, 100);
@@ -111,7 +111,7 @@ namespace Puissance_4_Groupe_B
             // 
             // lblJ1
             // 
-            this.lblJ1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblJ1.Font = new System.Drawing.Font("Impact", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblJ1.Location = new System.Drawing.Point(140, 12);
             this.lblJ1.Name = "lblJ1";
             this.lblJ1.Size = new System.Drawing.Size(290, 100);
@@ -175,204 +175,6 @@ namespace Puissance_4_Groupe_B
             this.pnl1.Size = new System.Drawing.Size(850, 688);
             this.pnl1.TabIndex = 19;
             this.pnl1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCoo);
-            // 
-            // pic00
-            // 
-            this.pic00.BackColor = System.Drawing.Color.Transparent;
-            this.pic00.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic00.Location = new System.Drawing.Point(22, 24);
-            this.pic00.Name = "pic00";
-            this.pic00.Size = new System.Drawing.Size(93, 94);
-            this.pic00.TabIndex = 0;
-            this.pic00.TabStop = false;
-            this.pic00.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic01
-            // 
-            this.pic01.BackColor = System.Drawing.Color.Transparent;
-            this.pic01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic01.Location = new System.Drawing.Point(166, 24);
-            this.pic01.Name = "pic01";
-            this.pic01.Size = new System.Drawing.Size(93, 94);
-            this.pic01.TabIndex = 1;
-            this.pic01.TabStop = false;
-            this.pic01.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic03
-            // 
-            this.pic03.BackColor = System.Drawing.Color.Transparent;
-            this.pic03.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic03.Location = new System.Drawing.Point(451, 24);
-            this.pic03.Name = "pic03";
-            this.pic03.Size = new System.Drawing.Size(93, 94);
-            this.pic03.TabIndex = 3;
-            this.pic03.TabStop = false;
-            this.pic03.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic02
-            // 
-            this.pic02.BackColor = System.Drawing.Color.Transparent;
-            this.pic02.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic02.Location = new System.Drawing.Point(307, 24);
-            this.pic02.Name = "pic02";
-            this.pic02.Size = new System.Drawing.Size(93, 94);
-            this.pic02.TabIndex = 2;
-            this.pic02.TabStop = false;
-            this.pic02.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic05
-            // 
-            this.pic05.BackColor = System.Drawing.Color.Transparent;
-            this.pic05.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic05.Location = new System.Drawing.Point(736, 24);
-            this.pic05.Name = "pic05";
-            this.pic05.Size = new System.Drawing.Size(93, 94);
-            this.pic05.TabIndex = 5;
-            this.pic05.TabStop = false;
-            this.pic05.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic04
-            // 
-            this.pic04.BackColor = System.Drawing.Color.Transparent;
-            this.pic04.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic04.Location = new System.Drawing.Point(592, 24);
-            this.pic04.Name = "pic04";
-            this.pic04.Size = new System.Drawing.Size(93, 94);
-            this.pic04.TabIndex = 4;
-            this.pic04.TabStop = false;
-            this.pic04.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic25
-            // 
-            this.pic25.BackColor = System.Drawing.Color.Transparent;
-            this.pic25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic25.Location = new System.Drawing.Point(736, 297);
-            this.pic25.Name = "pic25";
-            this.pic25.Size = new System.Drawing.Size(93, 94);
-            this.pic25.TabIndex = 11;
-            this.pic25.TabStop = false;
-            this.pic25.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic24
-            // 
-            this.pic24.BackColor = System.Drawing.Color.Transparent;
-            this.pic24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic24.Location = new System.Drawing.Point(592, 297);
-            this.pic24.Name = "pic24";
-            this.pic24.Size = new System.Drawing.Size(93, 94);
-            this.pic24.TabIndex = 10;
-            this.pic24.TabStop = false;
-            this.pic24.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic23
-            // 
-            this.pic23.BackColor = System.Drawing.Color.Transparent;
-            this.pic23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic23.Location = new System.Drawing.Point(451, 297);
-            this.pic23.Name = "pic23";
-            this.pic23.Size = new System.Drawing.Size(93, 94);
-            this.pic23.TabIndex = 9;
-            this.pic23.TabStop = false;
-            this.pic23.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic22
-            // 
-            this.pic22.BackColor = System.Drawing.Color.Transparent;
-            this.pic22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic22.Location = new System.Drawing.Point(307, 297);
-            this.pic22.Name = "pic22";
-            this.pic22.Size = new System.Drawing.Size(93, 94);
-            this.pic22.TabIndex = 8;
-            this.pic22.TabStop = false;
-            this.pic22.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic21
-            // 
-            this.pic21.BackColor = System.Drawing.Color.Transparent;
-            this.pic21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic21.Location = new System.Drawing.Point(166, 297);
-            this.pic21.Name = "pic21";
-            this.pic21.Size = new System.Drawing.Size(93, 94);
-            this.pic21.TabIndex = 7;
-            this.pic21.TabStop = false;
-            this.pic21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic20
-            // 
-            this.pic20.BackColor = System.Drawing.Color.Transparent;
-            this.pic20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic20.Location = new System.Drawing.Point(22, 297);
-            this.pic20.Name = "pic20";
-            this.pic20.Size = new System.Drawing.Size(93, 94);
-            this.pic20.TabIndex = 6;
-            this.pic20.TabStop = false;
-            this.pic20.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic15
-            // 
-            this.pic15.BackColor = System.Drawing.Color.Transparent;
-            this.pic15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic15.Location = new System.Drawing.Point(736, 160);
-            this.pic15.Name = "pic15";
-            this.pic15.Size = new System.Drawing.Size(93, 94);
-            this.pic15.TabIndex = 17;
-            this.pic15.TabStop = false;
-            this.pic15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic14
-            // 
-            this.pic14.BackColor = System.Drawing.Color.Transparent;
-            this.pic14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic14.Location = new System.Drawing.Point(592, 160);
-            this.pic14.Name = "pic14";
-            this.pic14.Size = new System.Drawing.Size(93, 94);
-            this.pic14.TabIndex = 16;
-            this.pic14.TabStop = false;
-            this.pic14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic13
-            // 
-            this.pic13.BackColor = System.Drawing.Color.Transparent;
-            this.pic13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic13.Location = new System.Drawing.Point(451, 160);
-            this.pic13.Name = "pic13";
-            this.pic13.Size = new System.Drawing.Size(93, 94);
-            this.pic13.TabIndex = 15;
-            this.pic13.TabStop = false;
-            this.pic13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic12
-            // 
-            this.pic12.BackColor = System.Drawing.Color.Transparent;
-            this.pic12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic12.Location = new System.Drawing.Point(307, 160);
-            this.pic12.Name = "pic12";
-            this.pic12.Size = new System.Drawing.Size(93, 94);
-            this.pic12.TabIndex = 14;
-            this.pic12.TabStop = false;
-            this.pic12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic11
-            // 
-            this.pic11.BackColor = System.Drawing.Color.Transparent;
-            this.pic11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic11.Location = new System.Drawing.Point(166, 160);
-            this.pic11.Name = "pic11";
-            this.pic11.Size = new System.Drawing.Size(93, 94);
-            this.pic11.TabIndex = 13;
-            this.pic11.TabStop = false;
-            this.pic11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
-            // 
-            // pic10
-            // 
-            this.pic10.BackColor = System.Drawing.Color.Transparent;
-            this.pic10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic10.Location = new System.Drawing.Point(22, 160);
-            this.pic10.Name = "pic10";
-            this.pic10.Size = new System.Drawing.Size(93, 94);
-            this.pic10.TabIndex = 12;
-            this.pic10.TabStop = false;
-            this.pic10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
             // 
             // pic35
             // 
@@ -506,10 +308,209 @@ namespace Puissance_4_Groupe_B
             this.pic40.TabStop = false;
             this.pic40.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
             // 
+            // pic15
+            // 
+            this.pic15.BackColor = System.Drawing.Color.Transparent;
+            this.pic15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic15.Location = new System.Drawing.Point(736, 160);
+            this.pic15.Name = "pic15";
+            this.pic15.Size = new System.Drawing.Size(93, 94);
+            this.pic15.TabIndex = 17;
+            this.pic15.TabStop = false;
+            this.pic15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic14
+            // 
+            this.pic14.BackColor = System.Drawing.Color.Transparent;
+            this.pic14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic14.Location = new System.Drawing.Point(592, 160);
+            this.pic14.Name = "pic14";
+            this.pic14.Size = new System.Drawing.Size(93, 94);
+            this.pic14.TabIndex = 16;
+            this.pic14.TabStop = false;
+            this.pic14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic13
+            // 
+            this.pic13.BackColor = System.Drawing.Color.Transparent;
+            this.pic13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic13.Location = new System.Drawing.Point(451, 160);
+            this.pic13.Name = "pic13";
+            this.pic13.Size = new System.Drawing.Size(93, 94);
+            this.pic13.TabIndex = 15;
+            this.pic13.TabStop = false;
+            this.pic13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic12
+            // 
+            this.pic12.BackColor = System.Drawing.Color.Transparent;
+            this.pic12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic12.Location = new System.Drawing.Point(307, 160);
+            this.pic12.Name = "pic12";
+            this.pic12.Size = new System.Drawing.Size(93, 94);
+            this.pic12.TabIndex = 14;
+            this.pic12.TabStop = false;
+            this.pic12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic11
+            // 
+            this.pic11.BackColor = System.Drawing.Color.Transparent;
+            this.pic11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic11.Location = new System.Drawing.Point(166, 160);
+            this.pic11.Name = "pic11";
+            this.pic11.Size = new System.Drawing.Size(93, 94);
+            this.pic11.TabIndex = 13;
+            this.pic11.TabStop = false;
+            this.pic11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic10
+            // 
+            this.pic10.BackColor = System.Drawing.Color.Transparent;
+            this.pic10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic10.Location = new System.Drawing.Point(22, 160);
+            this.pic10.Name = "pic10";
+            this.pic10.Size = new System.Drawing.Size(93, 94);
+            this.pic10.TabIndex = 12;
+            this.pic10.TabStop = false;
+            this.pic10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic25
+            // 
+            this.pic25.BackColor = System.Drawing.Color.Transparent;
+            this.pic25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic25.Location = new System.Drawing.Point(736, 297);
+            this.pic25.Name = "pic25";
+            this.pic25.Size = new System.Drawing.Size(93, 94);
+            this.pic25.TabIndex = 11;
+            this.pic25.TabStop = false;
+            this.pic25.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic24
+            // 
+            this.pic24.BackColor = System.Drawing.Color.Transparent;
+            this.pic24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic24.Location = new System.Drawing.Point(592, 297);
+            this.pic24.Name = "pic24";
+            this.pic24.Size = new System.Drawing.Size(93, 94);
+            this.pic24.TabIndex = 10;
+            this.pic24.TabStop = false;
+            this.pic24.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic23
+            // 
+            this.pic23.BackColor = System.Drawing.Color.Transparent;
+            this.pic23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic23.Location = new System.Drawing.Point(451, 297);
+            this.pic23.Name = "pic23";
+            this.pic23.Size = new System.Drawing.Size(93, 94);
+            this.pic23.TabIndex = 9;
+            this.pic23.TabStop = false;
+            this.pic23.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic22
+            // 
+            this.pic22.BackColor = System.Drawing.Color.Transparent;
+            this.pic22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic22.Location = new System.Drawing.Point(307, 297);
+            this.pic22.Name = "pic22";
+            this.pic22.Size = new System.Drawing.Size(93, 94);
+            this.pic22.TabIndex = 8;
+            this.pic22.TabStop = false;
+            this.pic22.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic21
+            // 
+            this.pic21.BackColor = System.Drawing.Color.Transparent;
+            this.pic21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic21.Location = new System.Drawing.Point(166, 297);
+            this.pic21.Name = "pic21";
+            this.pic21.Size = new System.Drawing.Size(93, 94);
+            this.pic21.TabIndex = 7;
+            this.pic21.TabStop = false;
+            this.pic21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic20
+            // 
+            this.pic20.BackColor = System.Drawing.Color.Transparent;
+            this.pic20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic20.Location = new System.Drawing.Point(22, 297);
+            this.pic20.Name = "pic20";
+            this.pic20.Size = new System.Drawing.Size(93, 94);
+            this.pic20.TabIndex = 6;
+            this.pic20.TabStop = false;
+            this.pic20.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic05
+            // 
+            this.pic05.BackColor = System.Drawing.Color.Transparent;
+            this.pic05.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic05.Location = new System.Drawing.Point(736, 24);
+            this.pic05.Name = "pic05";
+            this.pic05.Size = new System.Drawing.Size(93, 94);
+            this.pic05.TabIndex = 5;
+            this.pic05.TabStop = false;
+            this.pic05.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic04
+            // 
+            this.pic04.BackColor = System.Drawing.Color.Transparent;
+            this.pic04.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic04.Location = new System.Drawing.Point(592, 24);
+            this.pic04.Name = "pic04";
+            this.pic04.Size = new System.Drawing.Size(93, 94);
+            this.pic04.TabIndex = 4;
+            this.pic04.TabStop = false;
+            this.pic04.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic03
+            // 
+            this.pic03.BackColor = System.Drawing.Color.Transparent;
+            this.pic03.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic03.Location = new System.Drawing.Point(451, 24);
+            this.pic03.Name = "pic03";
+            this.pic03.Size = new System.Drawing.Size(93, 94);
+            this.pic03.TabIndex = 3;
+            this.pic03.TabStop = false;
+            this.pic03.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic02
+            // 
+            this.pic02.BackColor = System.Drawing.Color.Transparent;
+            this.pic02.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic02.Location = new System.Drawing.Point(307, 24);
+            this.pic02.Name = "pic02";
+            this.pic02.Size = new System.Drawing.Size(93, 94);
+            this.pic02.TabIndex = 2;
+            this.pic02.TabStop = false;
+            this.pic02.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic01
+            // 
+            this.pic01.BackColor = System.Drawing.Color.Transparent;
+            this.pic01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic01.Location = new System.Drawing.Point(166, 24);
+            this.pic01.Name = "pic01";
+            this.pic01.Size = new System.Drawing.Size(93, 94);
+            this.pic01.TabIndex = 1;
+            this.pic01.TabStop = false;
+            this.pic01.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
+            // pic00
+            // 
+            this.pic00.BackColor = System.Drawing.Color.Transparent;
+            this.pic00.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic00.Location = new System.Drawing.Point(22, 24);
+            this.pic00.Name = "pic00";
+            this.pic00.Size = new System.Drawing.Size(93, 94);
+            this.pic00.TabIndex = 0;
+            this.pic00.TabStop = false;
+            this.pic00.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RecupCooPictureBox);
+            // 
             // TailleS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1018, 881);
             this.Controls.Add(this.pnl1);
             this.Controls.Add(this.lblJ2);
@@ -523,24 +524,6 @@ namespace Puissance_4_Groupe_B
             ((System.ComponentModel.ISupportInitialize)(this.picJ2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picJ1)).EndInit();
             this.pnl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic00)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic01)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic03)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic02)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic05)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic04)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic33)).EndInit();
@@ -553,6 +536,24 @@ namespace Puissance_4_Groupe_B
             ((System.ComponentModel.ISupportInitialize)(this.pic42)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic40)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic05)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic04)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic03)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic02)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic01)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic00)).EndInit();
             this.ResumeLayout(false);
 
         }

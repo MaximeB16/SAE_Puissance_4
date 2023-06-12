@@ -13,8 +13,9 @@ namespace Puissance_4_Groupe_B
 {
     public partial class TailleGrille : Form
     {
-        
+        internal FrmMenu Menu = new FrmMenu();
         internal Grille PartieSuivante;
+        internal bool mode_sombre;
         public TailleGrille()
         {
             InitializeComponent();
@@ -57,7 +58,27 @@ namespace Puissance_4_Groupe_B
 
         private void TailleGrille_Load(object sender, EventArgs e)
         {
+            Menu = (FrmMenu)this.Owner;
+            mode_sombre = Menu.mode_sombre;
             this.Owner.Hide();
+            if (Menu.mode_sombre)
+            {
+                this.BackColor = Color.FromArgb(29, 29, 29);
+                foreach (Control sect in this.Controls)
+                {
+                    sect.ForeColor = Color.FromArgb(240, 240, 240);
+                    sect.BackColor = Color.FromArgb(29, 29, 29);
+                }
+            }
+            else
+            {
+                this.BackColor = Color.White;
+                foreach (Control sect in this.Controls)
+                {
+                    sect.ForeColor = Color.Black;
+                    sect.BackColor = Color.White;
+                }
+            }
         }
     }
 }

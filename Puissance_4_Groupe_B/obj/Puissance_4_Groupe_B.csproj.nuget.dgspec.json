@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B.csproj": {}
+    "C:\\Users\\Maxime\\Downloads\\SAE_Puissance_4-master\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B.csproj": {}
   },
   "projects": {
-    "D:\\Puissance_4_Groupe_B\\Jeu\\Jeu.csproj": {
+    "C:\\Users\\Maxime\\Downloads\\SAE_Puissance_4-master\\Jeu\\Jeu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Puissance_4_Groupe_B\\Jeu\\Jeu.csproj",
+        "projectUniqueName": "C:\\Users\\Maxime\\Downloads\\SAE_Puissance_4-master\\Jeu\\Jeu.csproj",
         "projectName": "Jeu",
-        "projectPath": "D:\\Puissance_4_Groupe_B\\Jeu\\Jeu.csproj",
-        "packagesPath": "C:\\Users\\b22201330\\.nuget\\packages\\",
-        "outputPath": "D:\\Puissance_4_Groupe_B\\Jeu\\obj\\",
+        "projectPath": "C:\\Users\\Maxime\\Downloads\\SAE_Puissance_4-master\\Jeu\\Jeu.csproj",
+        "packagesPath": "C:\\Users\\Maxime\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Maxime\\Downloads\\SAE_Puissance_4-master\\Jeu\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\b22201330\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Maxime\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,34 +45,49 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.410\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B.csproj": {
+    "C:\\Users\\Maxime\\Downloads\\SAE_Puissance_4-master\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B.csproj",
+        "projectUniqueName": "C:\\Users\\Maxime\\Downloads\\SAE_Puissance_4-master\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B.csproj",
         "projectName": "Puissance_4_Groupe_B",
-        "projectPath": "D:\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B.csproj",
-        "packagesPath": "C:\\Users\\b22201330\\.nuget\\packages\\",
-        "outputPath": "D:\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B\\obj\\",
+        "projectPath": "C:\\Users\\Maxime\\Downloads\\SAE_Puissance_4-master\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B.csproj",
+        "packagesPath": "C:\\Users\\Maxime\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Maxime\\Downloads\\SAE_Puissance_4-master\\Puissance_4_Groupe_B\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\b22201330\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Maxime\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0-windows7.0"
+          "net5.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -82,8 +97,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "D:\\Puissance_4_Groupe_B\\Jeu\\Jeu.csproj": {
-                "projectPath": "D:\\Puissance_4_Groupe_B\\Jeu\\Jeu.csproj"
+              "C:\\Users\\Maxime\\Downloads\\SAE_Puissance_4-master\\Jeu\\Jeu.csproj": {
+                "projectPath": "C:\\Users\\Maxime\\Downloads\\SAE_Puissance_4-master\\Jeu\\Jeu.csproj"
               }
             }
           }
@@ -103,7 +118,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -115,7 +131,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.410\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

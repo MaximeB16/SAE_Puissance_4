@@ -29,57 +29,73 @@ namespace Puissance_4_Groupe_B
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            btnQuitter = new System.Windows.Forms.Button();
+            btnNewGame = new System.Windows.Forms.Button();
+            lbl1 = new System.Windows.Forms.Label();
+            lbl2 = new System.Windows.Forms.Label();
+            SuspendLayout();
             // 
-            // button1
+            // btnQuitter
             // 
-            this.button1.Location = new System.Drawing.Point(24, 364);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(247, 62);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Restart";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            btnQuitter.Font = new System.Drawing.Font("Impact", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnQuitter.Location = new System.Drawing.Point(408, 364);
+            btnQuitter.Name = "btnQuitter";
+            btnQuitter.Size = new System.Drawing.Size(369, 62);
+            btnQuitter.TabIndex = 1;
+            btnQuitter.Text = "Quitter";
+            btnQuitter.UseVisualStyleBackColor = true;
+            btnQuitter.Click += btnQuitter_Click;
             // 
-            // button2
+            // btnNewGame
             // 
-            this.button2.Location = new System.Drawing.Point(530, 364);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(247, 62);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Menu";
-            this.button2.UseVisualStyleBackColor = true;
+            btnNewGame.Font = new System.Drawing.Font("Impact", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnNewGame.Location = new System.Drawing.Point(22, 364);
+            btnNewGame.Name = "btnNewGame";
+            btnNewGame.Size = new System.Drawing.Size(369, 62);
+            btnNewGame.TabIndex = 2;
+            btnNewGame.Text = "New Game";
+            btnNewGame.UseVisualStyleBackColor = true;
+            btnNewGame.Click += button3_Click;
             // 
-            // button3
+            // lbl1
             // 
-            this.button3.Location = new System.Drawing.Point(277, 364);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(247, 62);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "New Game";
-            this.button3.UseVisualStyleBackColor = true;
+            lbl1.Font = new System.Drawing.Font("Impact", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lbl1.Location = new System.Drawing.Point(55, 42);
+            lbl1.Name = "lbl1";
+            lbl1.Size = new System.Drawing.Size(281, 66);
+            lbl1.TabIndex = 3;
+            lbl1.Text = "Victoire de";
+            // 
+            // lbl2
+            // 
+            lbl2.Font = new System.Drawing.Font("Impact", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lbl2.Location = new System.Drawing.Point(113, 137);
+            lbl2.Name = "lbl2";
+            lbl2.Size = new System.Drawing.Size(581, 199);
+            lbl2.TabIndex = 4;
+            lbl2.Text = "Victoire de";
+            lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Resultat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "Resultat";
-            this.Text = "Resultat";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.White;
+            ClientSize = new System.Drawing.Size(800, 450);
+            Controls.Add(lbl2);
+            Controls.Add(lbl1);
+            Controls.Add(btnNewGame);
+            Controls.Add(btnQuitter);
+            Name = "Resultat";
+            Text = "Resultat";
+            Load += Resultat_Load_1;
+            ResumeLayout(false);
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnQuitter;
+        private System.Windows.Forms.Button btnNewGame;
+        private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.Label lbl2;
     }
 }

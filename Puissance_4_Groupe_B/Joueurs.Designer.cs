@@ -37,6 +37,7 @@ namespace Puissance_4_Groupe_B
             // 
             // btnRetour
             // 
+            this.btnRetour.Font = new System.Drawing.Font("Impact", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRetour.Location = new System.Drawing.Point(12, 406);
             this.btnRetour.Name = "btnRetour";
             this.btnRetour.Size = new System.Drawing.Size(105, 32);
@@ -47,7 +48,7 @@ namespace Puissance_4_Groupe_B
             // 
             // lblJoueur
             // 
-            this.lblJoueur.Font = new System.Drawing.Font("Segoe UI", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblJoueur.Font = new System.Drawing.Font("Impact", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblJoueur.Location = new System.Drawing.Point(121, 9);
             this.lblJoueur.Name = "lblJoueur";
             this.lblJoueur.Size = new System.Drawing.Size(526, 118);
@@ -83,6 +84,7 @@ namespace Puissance_4_Groupe_B
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnJvJ);
             this.Controls.Add(this.btnJvIA);

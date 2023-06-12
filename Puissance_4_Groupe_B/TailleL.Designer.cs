@@ -950,7 +950,7 @@ namespace Puissance_4_Groupe_B
             // 
             // lblJ1
             // 
-            this.lblJ1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblJ1.Font = new System.Drawing.Font("Impact", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblJ1.Location = new System.Drawing.Point(154, 23);
             this.lblJ1.Name = "lblJ1";
             this.lblJ1.Size = new System.Drawing.Size(290, 100);
@@ -960,7 +960,7 @@ namespace Puissance_4_Groupe_B
             // 
             // lblJ2
             // 
-            this.lblJ2.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblJ2.Font = new System.Drawing.Font("Impact", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblJ2.Location = new System.Drawing.Point(580, 23);
             this.lblJ2.Name = "lblJ2";
             this.lblJ2.Size = new System.Drawing.Size(290, 100);
@@ -972,6 +972,7 @@ namespace Puissance_4_Groupe_B
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1018, 881);
             this.Controls.Add(this.lblJ2);
             this.Controls.Add(this.lblJ1);
