@@ -43,11 +43,11 @@ namespace Puissance_4_Groupe_B
                 lbl1.Visible = true;
                 if (!FrmParam.PartieSuivante.get_Tour())
                 {
-                    lbl2.Text = FrmParam.PartieSuivante.get_NomJ1();
+                    lbl2.Text = FrmParam.PartieSuivante.get_NomJ(0);
                 }
                 else
                 {
-                    lbl2.Text = FrmParam.PartieSuivante.get_NomJ2();
+                    lbl2.Text = FrmParam.PartieSuivante.get_NomJ(1);
                 }
             }
             if (mode_sombre)

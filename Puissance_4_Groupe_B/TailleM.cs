@@ -71,8 +71,8 @@ namespace Puissance_4_Groupe_B
             PartieSuivante.restart();
             picJ1.Image = FrmParam.Pions_Basique[FrmParam.pion1];
             picJ2.Image = FrmParam.Pions_Basique[FrmParam.pion2];
-            lblJ1.Text = PartieSuivante.get_NomJ1();
-            lblJ2.Text = PartieSuivante.get_NomJ2();
+            lblJ1.Text = PartieSuivante.get_NomJ(0);
+            lblJ2.Text = PartieSuivante.get_NomJ(1);
             if (mode_sombre)
             {
                 this.BackColor = Color.FromArgb(29, 29, 29);
