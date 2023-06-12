@@ -58,7 +58,7 @@ namespace Jeu
         {
             // Réinitialise toutes les valeurs par défaut
             Nb_Coups_Jouer = 0;
-            Partie_fini = false;
+            Partie_finie = false;
             for (int i = 0; i < Lignes+1; i++)
             {
                 for (int j = 0; j < Colonnes+1; j++)
