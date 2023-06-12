@@ -381,8 +381,8 @@ namespace Jeu
             if (case_basse[c] != -1)
             {
                 pose_pion(c);
+                verif = verification(case_basse[c],c);
                 update_case_basse(c);
-                verif = verification(l, c);
                 ProchainTour();
             }
             return verif;
