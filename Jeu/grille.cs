@@ -20,10 +20,12 @@ namespace Jeu
 
         public Grille(int l, int c)
         {
+            // Indice de la dernière ligne et de la dernière colonne
             Lignes = l-1;
             Colonnes = c-1;
             Nom_Joueurs.Add("Alice"); Nom_Joueurs.Add("Connor");
             Tour = true;
+            // Initialisation de la grille de jeu avec des 0 --> aucun pion posé
             grille = new int[l,c];
             for (int i = 0; i < l; i++)
             {
@@ -32,6 +34,7 @@ namespace Jeu
                     grille[i, j] = 0;
                 }
             }
+            // Initialisation du tableau de la plus basse ligne disponible pour chaque colonne
             case_basse = new int[c];
             for (int k = 0; k < c; k++)
             {
@@ -39,14 +42,23 @@ namespace Jeu
             }
         }
 
+        /// <summary>
+        /// Getter du tableau 2D représentant les pions placés
+        /// </summary>
+        /// <returns>État de la grille</returns>
         public int[,] get_grille()
         {
             return grille;
         }
 
+        /// <summary>
+        /// Recommence la partie
+        /// </summary>
         public void restart()
         {
+            // Réinitialise toutes les valeurs par défaut
             Nb_Coups_Jouer = 0;
+            Partie_fini = false;
             for (int i = 0; i < Lignes+1; i++)
             {
                 for (int j = 0; j < Colonnes+1; j++)
@@ -58,47 +70,86 @@ namespace Jeu
             {
                 case_basse[k] = Lignes;
             }
-        }
+    }
 
+        /// <summary>
+        /// Indique si la partie est finie ou non
+        /// </summary>
+        /// <returns>Vrai si la partie est finie, faux si elle est toujours en cours</returns>
         public bool get_est_fini()
         {
             return Partie_finie;
         }
 
+        /// <summary>
+        /// Défini le joueur qui joue
+        /// </summary>
+        /// <param name="y">Vrai si c'est au tour du joueur 1, faux si  c'est à celui du joueur 2</param>
         public void set_tour(bool y)
         {
             Tour = y;
         }
+
+        /// <summary>
+        /// Donne le nombre de coups joués depuis le début de la partie
+        /// </summary>
+        /// <returns>Nombre de coups joués</returns>
         public int get_Nb_Coup_Jouer()
         {
             return Nb_Coups_Jouer;
         }
+
+        /// <summary>
+        /// Donne le nombre de lignes de la grille
+        /// </summary>
+        /// <returns>Nombre de lignes</returns>
         public int get_Lignes()
         {
             return Lignes;
         }
-        public int get_Nb_Joueurs()
-        {
-            return Nb_Joueurs;
-        }
+
+        /// <summary>
+        /// Donne le nombre de colonnes de la grille
+        /// </summary>
+        /// <returns>Nombre de colonnes</returns>
         public int get_Colonnes()
         {
             return Colonnes;
         }
+
+        /// <summary>
+        /// Renvoie le nombre de joueurs humains
+        /// </summary>
+        /// <returns>Nombre de joueurs</returns>
+        public int get_Nb_Joueurs()
+        {
+            return Nb_Joueurs;
+        }
+
+        /// <summary>
+        /// Renvoie le Tour en cours
+        /// </summary>
+        /// <returns>Vrai si c'est au tour du joueur 1, faux sii c'est au tour du  joueur 2</returns>
         public bool get_Tour()
         {
             return Tour;
         }
-        public string get_NomJ1()
-        {
-            return Nom_Joueurs[0];
-        }
-        public string get_NomJ2()
-        {
-            return Nom_Joueurs[1];
-        }
-        //TEST
 
+        /// <summary>
+        /// Renvoie le nom du joueur 
+        /// </summary>
+        /// <param name="joueur">indice du joueurs</param>
+        /// <returns></returns>
+        public string get_NomJ(int joueur)
+        {
+            return Nom_Joueurs[joueur];
+        }
+
+        /// <summary>
+        /// Met à jour le nom de chaque joueur
+        /// </summary>
+        /// <param name="Name1">Nouveau nom du joueur 1</param>
+        /// <param name="Name2">Nouveau nom du joueur 2</param>
         public void update_NomJ(string Name1, string Name2)
         {
             if (Name1 != "")
@@ -111,11 +162,18 @@ namespace Jeu
             }
         }
 
+        /// <summary>
+        /// Met à jour le nombre de joueurs humains
+        /// </summary>
+        /// <param name="k">Nouveau nombre de joueurs humains</param>
         public void update_NbJ(int k)
         {
             Nb_Joueurs = k;
         }
 
+        /// <summary>
+        /// Passe au tour suivant
+        /// </summary>
         public void ProchainTour()
         {
             Tour = !Tour;
@@ -133,16 +191,31 @@ namespace Jeu
             Nb_Coups_Jouer += 1;
         }
 
+        /// <summary>
+        /// Renvoie la ligne non-utilisée la plus basse de la colonne donnée
+        /// </summary>
+        /// <param name="c">Indice de la colonne</param>
+        /// <returns>Ligne la plus basse de la colonne</returns>
         public int case_la_plus_basse(int c)
         {
             return case_basse[c];
         }
 
+        /// <summary>
+        /// Met à jour la valeur à l'indice de la colonne donnée dans le tableau des cases les plus basses
+        /// </summary>
+        /// <param name="c">Indice de la colonne</param>
         public void update_case_basse(int c)
         {
             case_basse[c] -= 1;
         }
 
+        /// <summary>
+        /// Vérifie l'état de la grille pour la case à la ligne et colonne donnée
+        /// </summary>
+        /// <param name="l">Indice de la ligne</param>
+        /// <param name="c">Indice de la colonne</param>
+        /// <returns>1 si l'un des joueurs à gagner, -1 si il y a match nul et 0 si la partie n'est pas encore finie</returns>
         public int verification(int l, int c)
         {
             int k = 1;
@@ -287,20 +360,27 @@ namespace Jeu
             return 0;
         }
 
+        /// <summary>
+        /// Place le pion dans la colonne donnée et vérifie l'état de la grille
+        /// </summary>
+        /// <param name="c">Indice de la colonne</param>
+        /// <returns>Vérification de la grille</returns>
         public int coup(int c)
         {
-            int l = case_la_plus_basse(c);
             int verif = 0;
-            if (l != -1)
+            if (case_basse[c] != -1)
             {
                 pose_pion(c);
                 update_case_basse(c);
-                verif = verification(l, c);
                 ProchainTour();
             }
             return verif;
         }
 
+        /// <summary>
+        /// Fait jouer l'IA
+        /// </summary>
+        /// <returns>Colonne du meilleur coup</returns>
         public int TourIA()
         {
             int meilleurCoup = TrouverMeilleurCoup();
@@ -314,6 +394,10 @@ namespace Jeu
             return meilleurCoup;
         }
 
+        /// <summary>
+        /// Évalue l'état de la grille
+        /// </summary>
+        /// <returns>Valeur de l'état</returns>
         public int EvaluerEtat()
         {
             int score = 0;
