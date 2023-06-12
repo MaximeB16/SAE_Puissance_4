@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "rhBhJPpcu0aGrk25r9RXyxlidjK+gsUNNEDgeKtE6is4qFdLgUFTby0hPnaPHMkxk80m9ZPjRk1jFbtvM9M2pQ==",
+  "dgSpecHash": "TK1pFjA4FE7VrXGj8cjFQNgWsPjs7FGzET19XS1FKhTNQRedAtODbRbKNv6fyUYwVqh6qJb3qLwk77JzHZVA3A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maxime\\Downloads\\SAE_Puissance_4-master\\Jeu\\Jeu.csproj",
+  "projectFilePath": "C:\\Users\\lsmam\\source\\repos\\SAE_Puissance_4\\Jeu\\Jeu.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Maxime\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\Maxime\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\Maxime\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+    "C:\\Users\\lsmam\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\lsmam\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\lsmam\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }

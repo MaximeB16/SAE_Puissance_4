@@ -17,11 +17,11 @@ namespace Puissance_4_Groupe_B
         internal Grille PartieSuivante;
         internal bool mode_sombre;
 
+
         public TailleM()
         {
             InitializeComponent();
         }
-
         private void Coup(int c)
         {
             Couleurs FrmParam = (Couleurs)this.Owner;
@@ -33,31 +33,37 @@ namespace Puissance_4_Groupe_B
                 if (PartieSuivante.get_Tour())
                 {
                     GrilleJeu[PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ1;
+                    FrmParam.fin = PartieSuivante.coup(c);
+                    if (FrmParam.fin != 0)
+                    {
+                        Resultat frmR = new Resultat();
+                        frmR.Show(this);
+                    }
                 }
                 else
                 {
                     if (PartieSuivante.get_Nb_Joueurs() == 2)
                     {
                         GrilleJeu[PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ2;
+                        FrmParam.fin = PartieSuivante.coup(c);
+                        if (FrmParam.fin != 0)
+                        {
+                            Resultat frmR = new Resultat();
+                            frmR.Show(this);
+                        }
                     }
                 }
 
-                if (PartieSuivante.get_Nb_Joueurs() == 1)
+                if (PartieSuivante.get_Nb_Joueurs() == 1 && FrmParam.fin == 0)
                 {
                     c = PartieSuivante.TourIA();
                     GrilleJeu[PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ2;
+                    FrmParam.fin = PartieSuivante.coup(c);
                     if (FrmParam.fin != 0)
                     {
                         Resultat frmR = new Resultat();
                         frmR.Show(this);
                     }
-                    PartieSuivante.ProchainTour();
-                }
-                FrmParam.fin = PartieSuivante.coup(c);
-                if (FrmParam.fin != 0)
-                {
-                    Resultat frmR = new Resultat();
-                    frmR.Show(this);
                 }
             }
         }
@@ -122,6 +128,11 @@ namespace Puissance_4_Groupe_B
         private void TailleM_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Owner.Show();
+        }
+
+        private void picJ2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

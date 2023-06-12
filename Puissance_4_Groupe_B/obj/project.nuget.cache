@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "91NbZjjgxRyMhAsSDxfOXasv1zU0f/YjwhPmNcEiXJ1i+MkmcKIvld5ZSECpyt9dxFBqbdE/KmyfI30BEWFhOQ==",
+  "dgSpecHash": "EiSldwlG4jdacRy+Z1r4rXBx2EICxihx5NwjjuMXHgEIJmvVReiCBGfpy1b1pwuUBOe/oBbdxTo7f3phkJcHGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maxime\\Downloads\\SAE_Puissance_4-master\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\lsmam\\source\\repos\\SAE_Puissance_4\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lsmam\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\lsmam\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\lsmam\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\lsmam\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
   "logs": []
 }

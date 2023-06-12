@@ -38,3 +38,13 @@ C:\Users\Maxime\Downloads\SAE_Puissance_4-master\Jeu\obj\Debug\netcoreapp3.1\Jeu
 C:\Users\Maxime\Downloads\SAE_Puissance_4-master\Jeu\obj\Debug\netcoreapp3.1\Jeu.csproj.CoreCompileInputs.cache
 C:\Users\Maxime\Downloads\SAE_Puissance_4-master\Jeu\obj\Debug\netcoreapp3.1\Jeu.dll
 C:\Users\Maxime\Downloads\SAE_Puissance_4-master\Jeu\obj\Debug\netcoreapp3.1\Jeu.pdb
+C:\Users\lsmam\source\repos\SAE_Puissance_4\Jeu\bin\Debug\netcoreapp3.1\Jeu.deps.json
+C:\Users\lsmam\source\repos\SAE_Puissance_4\Jeu\bin\Debug\netcoreapp3.1\Jeu.dll
+C:\Users\lsmam\source\repos\SAE_Puissance_4\Jeu\bin\Debug\netcoreapp3.1\Jeu.pdb
+C:\Users\lsmam\source\repos\SAE_Puissance_4\Jeu\obj\Debug\netcoreapp3.1\Jeu.csproj.AssemblyReference.cache
+C:\Users\lsmam\source\repos\SAE_Puissance_4\Jeu\obj\Debug\netcoreapp3.1\Jeu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lsmam\source\repos\SAE_Puissance_4\Jeu\obj\Debug\netcoreapp3.1\Jeu.AssemblyInfoInputs.cache
+C:\Users\lsmam\source\repos\SAE_Puissance_4\Jeu\obj\Debug\netcoreapp3.1\Jeu.AssemblyInfo.cs
+C:\Users\lsmam\source\repos\SAE_Puissance_4\Jeu\obj\Debug\netcoreapp3.1\Jeu.csproj.CoreCompileInputs.cache
+C:\Users\lsmam\source\repos\SAE_Puissance_4\Jeu\obj\Debug\netcoreapp3.1\Jeu.dll
+C:\Users\lsmam\source\repos\SAE_Puissance_4\Jeu\obj\Debug\netcoreapp3.1\Jeu.pdb

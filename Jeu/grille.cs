@@ -16,7 +16,7 @@ namespace Jeu
         private int Lignes;
         private int Colonnes;
         private bool Tour;
-        private bool Partie_fini = false;
+        private bool Partie_finie = false;
 
         public Grille(int l, int c)
         {
@@ -62,7 +62,7 @@ namespace Jeu
 
         public bool get_est_fini()
         {
-            return Partie_fini;
+            return Partie_finie;
         }
 
         public void set_tour(bool y)
@@ -120,15 +120,15 @@ namespace Jeu
         {
             Tour = !Tour;
         }
-        public void pose_pion(int l, int c)
+        public void pose_pion(int c)
         {
             if (Tour)
             {
-                grille[l, c] = 1;
+                grille[case_la_plus_basse(c), c] = 1;
             }
             else
             {
-                grille[l, c] = 2;
+                grille[case_la_plus_basse(c), c] = 2;
             }
             Nb_Coups_Jouer += 1;
         }
@@ -173,7 +173,6 @@ namespace Jeu
             {
                 if (grille[l, c] == grille[l + 1, c] && grille[l + 1, c] == grille[l + 2, c] && grille[l + 2, c] == grille[l + 3, c])
                 {
-                    Partie_fini = true;
                     return 1;
                 }
             }
@@ -205,7 +204,7 @@ namespace Jeu
             }
             if (Pion_Align >= 4)
             {
-                Partie_fini = true;
+                Partie_finie = true;
                 return 1;
             }
 
@@ -241,7 +240,7 @@ namespace Jeu
             }
             if (Pion_Align >= 4)
             {
-                Partie_fini = true;
+                Partie_finie = true;
                 return 1;
             }
 
@@ -277,11 +276,12 @@ namespace Jeu
             }
             if (Pion_Align >= 4)
             {
+                Partie_finie = true;
                 return 1;
             }
             if (Nb_Coups_Jouer == ( Lignes+1 ) * ( Colonnes+1 ) )
             {
-                Partie_fini = true;
+                Partie_finie = true;
                 return -1;
             }
             return 0;
@@ -293,7 +293,7 @@ namespace Jeu
             int verif = 0;
             if (l != -1)
             {
-                pose_pion(l, c);
+                pose_pion(c);
                 update_case_basse(c);
                 verif = verification(l, c);
                 ProchainTour();
@@ -303,63 +303,124 @@ namespace Jeu
 
         public int TourIA()
         {
-            int meilleurCoup = 0;
-            if (Tour && !Partie_fini)
+            int meilleurCoup = TrouverMeilleurCoup();
+
+            int ligneVide = ObtenirLigneVide(meilleurCoup);
+            if (ligneVide != -1)
             {
-                meilleurCoup = TrouverMeilleurCoup();
-                if (meilleurCoup != -1)
-                    coup(meilleurCoup);
+                grille[ligneVide, meilleurCoup] = 2; // Place le pion de l'IA dans la colonne choisie
             }
+
             return meilleurCoup;
         }
 
         public int EvaluerEtat()
         {
-            if (Partie_fini)
+            int score = 0;
+
+            // Évaluation basique :
+            // - 1 point pour chaque pion de l'IA (2) dans une ligne, colonne ou diagonale
+            // - -1 point pour chaque pion de l'adversaire (1) dans une ligne, colonne ou diagonale
+
+            // Évaluation des lignes
+
+            for (int l = 0; l < Lignes; l++)
             {
-                if (Tour)
+                for (int c = 0; c <= Colonnes - 4; c++)
                 {
-                    Partie_fini = true;
-                    return -1; // Le joueur 2 a gagné
-                }
-                else
-                {
-                    Partie_fini = true;
-                    return 1; // Le joueur 1 a gagné
+                    int pion1 = grille[l, c];
+                    int pion2 = grille[l, c + 1];
+                    int pion3 = grille[l, c + 2];
+                    int pion4 = grille[l, c + 3];
+
+                    if (pion1 == 2 && pion2 == 2 && pion3 == 2 && pion4 == 2)
+                        score += 10; // L'IA a une ligne complète de pions
+                    else if (pion1 == 1 && pion2 == 1 && pion3 == 1 && pion4 == 1)
+                        score -= 10; // L'adversaire a une ligne complète de pions
                 }
             }
-            else
-                return 0; // Match nul ou partie en cours
+            // Évaluation des colonnes
+            for (int c = 0; c < Colonnes; c++)
+            {
+                for (int l = 0; l <= Lignes - 4; l++)
+                {
+                    int pion1 = grille[l, c];
+                    int pion2 = grille[l + 1, c];
+                    int pion3 = grille[l + 2, c];
+                    int pion4 = grille[l + 3, c];
+
+                    
+                    if (pion1 == 2 && pion2 == 2 && pion3 == 2 && pion4 == 2)
+                        score += 10; // L'IA a une colonne complète de pions
+                    else if (pion1 == 1 && pion2 == 1 && pion3 == 1 && pion4 == 1)
+                        score -= 10; // L'adversaire a une colonne complète de pions
+                    
+                }
+            }
+
+            // Évaluation des diagonales descendantes
+            for (int l = 0; l <= Lignes - 4; l++)
+            {
+                for (int c = 0; c <= Colonnes - 4; c++)
+                {
+                    int pion1 = grille[l, c];
+                    int pion2 = grille[l + 1, c + 1];
+                    int pion3 = grille[l + 2, c + 2];
+                    int pion4 = grille[l + 3, c + 3];
+
+                    
+                    if (pion1 == 2 && pion2 == 2 && pion3 == 2 && pion4 == 2)
+                        score += 10; // L'IA a une diagonale descendante complète de pions
+                    else if (pion1 == 1 && pion2 == 1 && pion3 == 1 && pion4 == 1)
+                        score -= 10; // L'adversaire a une diagonale descendante complète de pions
+                    
+                }
+            }
+
+            // Évaluation des diagonales montantes
+            for (int l = Lignes - 1; l >= 3; l--)
+            {
+                for (int c = 0; c <= Colonnes - 4; c++)
+                {
+                    int pion1 = grille[l, c];
+                    int pion2 = grille[l - 1, c + 1];
+                    int pion3 = grille[l - 2, c + 2];
+                    int pion4 = grille[l - 3, c + 3];
+                    
+                    if (pion1 == 2 && pion2 == 2 && pion3 == 2 && pion4 == 2)
+                        score += 10; // L'IA a une diagonale montante complète de pions
+                    else if (pion1 == 1 && pion2 == 1 && pion3 == 1 && pion4 == 1)
+                        score -= 10; // L'adversaire a une diagonale montante complète de pions
+                    
+                }
+            }
+            return score;
         }
 
-        public int Minimax(int profondeur, bool joueurMax)
+        private int Minimax(int profondeur, bool tourJoueurMax)
         {
             int score = EvaluerEtat();
 
-            if (score != 0 || profondeur == 0)
+            if (Partie_finie || profondeur == 0)
+            {
                 return score;
+            }
 
-            if (joueurMax)
+            if (tourJoueurMax)
             {
                 int meilleurScore = int.MinValue;
 
-                for (int col = 0; col <= Colonnes; col++)
+                for (int c = 0; c < Colonnes; c++)
                 {
-                    if (case_basse[col] != -1)
+                    int l = ObtenirLigneVide(c);
+                    if (l != -1)
                     {
-                        int ligne = case_basse[col];
+                        grille[l, c] = 1; // La valeur 1 représente le joueur humain
 
-                        grille[ligne, col] = 1;
-                        case_basse[col]--;
-                        Nb_Coups_Jouer++;
+                        int scoreCoup = Minimax(profondeur - 1, false);
+                        grille[l, c] = 0; // Annuler le coup
 
-                        int scoreActuel = Minimax(profondeur - 1, !joueurMax);
-
-                        grille[ligne, col] = 0;
-                        case_basse[col]++;
-                        Nb_Coups_Jouer--;
-
-                        meilleurScore = Math.Max(meilleurScore, scoreActuel);
+                        meilleurScore = Math.Max(meilleurScore, scoreCoup);
                     }
                 }
 
@@ -369,23 +430,17 @@ namespace Jeu
             {
                 int meilleurScore = int.MaxValue;
 
-                for (int col = 0; col <= Colonnes; col++)
+                for (int c = 0; c < Colonnes; c++)
                 {
-                    if (case_basse[col] != -1)
+                    int l = ObtenirLigneVide(c);
+                    if (l != -1)
                     {
-                        int ligne = case_basse[col];
+                        grille[l, c] = 2; // La valeur 2 représente le joueur IA
 
-                        grille[ligne, col] = 2;
-                        case_basse[col]--;
-                        Nb_Coups_Jouer++;
+                        int scoreCoup = Minimax(profondeur - 1, true);
+                        grille[l, c] = 0; // Annuler le coup
 
-                        int scoreActuel = Minimax(profondeur - 1, joueurMax);
-
-                        grille[ligne, col] = 0;
-                        case_basse[col]++;
-                        Nb_Coups_Jouer--;
-
-                        meilleurScore = Math.Min(meilleurScore, scoreActuel);
+                        meilleurScore = Math.Min(meilleurScore, scoreCoup);
                     }
                 }
 
@@ -393,36 +448,45 @@ namespace Jeu
             }
         }
 
+        
         public int TrouverMeilleurCoup()
         {
-            int meilleurScore = int.MinValue;
             int meilleurCoup = -1;
+            int meilleurScore = int.MinValue;
+            int profondeur = 2;
 
-            for (int col = 0; col <= Colonnes; col++)
+            for (int c = 0; c < Colonnes; c++)
             {
-                if (case_basse[col] != -1)
+                int l = ObtenirLigneVide(c);
+                if (l != -1)
                 {
-                    int ligne = case_basse[col];
+                    grille[l, c] = 2; // La valeur 2 représente le joueur IA
 
-                    grille[ligne, col] = 1;
-                    case_basse[col]--;
-                    Nb_Coups_Jouer++;
+                    int score = Minimax(profondeur - 1, false);
+                    grille[l, c] = 0; // Annuler le coup
 
-                    int scoreActuel = Minimax(5, false); // Profondeur maximale de l'algorithme MinMax
-
-                    grille[ligne, col] = 0;
-                    case_basse[col]++;
-                    Nb_Coups_Jouer--;
-
-                    if (scoreActuel > meilleurScore)
+                    if (score > meilleurScore)
                     {
-                        meilleurScore = scoreActuel;
-                        meilleurCoup = col;
+                        meilleurScore = score;
+                        meilleurCoup = c;
                     }
                 }
             }
 
             return meilleurCoup;
+        }
+
+        private int ObtenirLigneVide(int colonne)
+        {
+            for (int l = Lignes - 1; l >= 0; l--)
+            {
+                if (grille[l, colonne] == 0) // La valeur 0 représente une case vide
+                {
+                    return l;
+                }
+            }
+
+            return -1; // Aucune ligne vide trouvée dans la colonne
         }
     }
 }
