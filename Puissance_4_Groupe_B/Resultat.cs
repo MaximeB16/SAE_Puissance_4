@@ -70,10 +70,11 @@ namespace Puissance_4_Groupe_B
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnNewGame_Click(object sender, EventArgs e)
         {
-            this.Owner.Close();
-            this.Close();
+            FrmParam.FrmParam.Show();
+            FrmParam.Close();
+            Close();
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)

@@ -55,7 +55,7 @@ namespace Puissance_4_Groupe_B
             btnNewGame.TabIndex = 2;
             btnNewGame.Text = "New Game";
             btnNewGame.UseVisualStyleBackColor = true;
-            btnNewGame.Click += button3_Click;
+            btnNewGame.Click += btnNewGame_Click;
             // 
             // lbl1
             // 
