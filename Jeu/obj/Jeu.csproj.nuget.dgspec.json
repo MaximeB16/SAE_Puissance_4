@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lsmam\\source\\repos\\SAE_Puissance_4\\Jeu\\Jeu.csproj": {}
+    "C:\\Users\\perri\\OneDrive\\Bureau\\p4\\Jeu\\Jeu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lsmam\\source\\repos\\SAE_Puissance_4\\Jeu\\Jeu.csproj": {
+    "C:\\Users\\perri\\OneDrive\\Bureau\\p4\\Jeu\\Jeu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lsmam\\source\\repos\\SAE_Puissance_4\\Jeu\\Jeu.csproj",
+        "projectUniqueName": "C:\\Users\\perri\\OneDrive\\Bureau\\p4\\Jeu\\Jeu.csproj",
         "projectName": "Jeu",
-        "projectPath": "C:\\Users\\lsmam\\source\\repos\\SAE_Puissance_4\\Jeu\\Jeu.csproj",
-        "packagesPath": "C:\\Users\\lsmam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lsmam\\Source\\Repos\\SAE_Puissance_4\\Jeu\\obj\\",
+        "projectPath": "C:\\Users\\perri\\OneDrive\\Bureau\\p4\\Jeu\\Jeu.csproj",
+        "packagesPath": "C:\\Users\\perri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\perri\\OneDrive\\Bureau\\p4\\Jeu\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lsmam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\perri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

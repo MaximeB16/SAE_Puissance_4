@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EiSldwlG4jdacRy+Z1r4rXBx2EICxihx5NwjjuMXHgEIJmvVReiCBGfpy1b1pwuUBOe/oBbdxTo7f3phkJcHGA==",
+  "dgSpecHash": "2snuJLhPR28UPIjy3mfM+22jU8pil5Gh/5R0yRqZTh4efupNt7YeKAMHrWzPHMYSz1RyHlQdXYs77BCkOzspTw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lsmam\\source\\repos\\SAE_Puissance_4\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\lsmam\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\lsmam\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\lsmam\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\lsmam\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\perri\\OneDrive\\Bureau\\p4\\Puissance_4_Groupe_B\\Puissance_4_Groupe_B.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

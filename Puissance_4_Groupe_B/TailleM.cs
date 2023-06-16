@@ -16,14 +16,17 @@ namespace Puissance_4_Groupe_B
         internal Couleurs FrmParam = new Couleurs();
         internal Grille PartieSuivante;
         internal bool mode_sombre;
+        internal IA ia;
 
 
         public TailleM()
         {
             InitializeComponent();
+            ia = new IA(PartieSuivante);
         }
         private void Coup(int c)
         {
+            ia.UpdateGrille(PartieSuivante);
             Couleurs FrmParam = (Couleurs)this.Owner;
             System.Drawing.Bitmap pionJ1 = FrmParam.Pions_Basique[FrmParam.pion1];
             System.Drawing.Bitmap pionJ2 = FrmParam.Pions_Basique[FrmParam.pion2];
@@ -32,9 +35,10 @@ namespace Puissance_4_Groupe_B
             {
                 if (PartieSuivante.get_Tour())
                 {
+
                     GrilleJeu[PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ1;
                     FrmParam.fin = PartieSuivante.coup(c);
-                    if (FrmParam.fin != 0)
+                    if (FrmParam.fin == 4 || FrmParam.fin == 0)
                     {
                         Resultat frmR = new Resultat();
                         frmR.Show(this);
@@ -44,28 +48,34 @@ namespace Puissance_4_Groupe_B
                 {
                     if (PartieSuivante.get_Nb_Joueurs() == 2)
                     {
+
                         GrilleJeu[PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ2;
                         FrmParam.fin = PartieSuivante.coup(c);
-                        if (FrmParam.fin != 0)
+                        if (FrmParam.fin == 4 || FrmParam.fin == 0)
                         {
                             Resultat frmR = new Resultat();
                             frmR.Show(this);
                         }
                     }
                 }
+                PartieSuivante.update_case_basse(c);
 
-                if (PartieSuivante.get_Nb_Joueurs() == 1 && FrmParam.fin == 0)
+                if (PartieSuivante.get_Nb_Joueurs() == 1 && FrmParam.fin != 4)
                 {
-                    c = PartieSuivante.TourIA();
-                    GrilleJeu[PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ2;
-                    FrmParam.fin = PartieSuivante.coup(c);
-                    if (FrmParam.fin != 0)
+                    Random random = new Random();
+                    int coupAJouer = ia.JouerUnCoupFictif(6,PartieSuivante.get_Tour(),random.Next(PartieSuivante.get_Colonnes()),1);
+                    FrmParam.fin = PartieSuivante.coup(coupAJouer);
+
+                    GrilleJeu[PartieSuivante.case_la_plus_basse(coupAJouer), coupAJouer].BackgroundImage = pionJ2;
+                    PartieSuivante.update_case_basse(coupAJouer);
+                    if (FrmParam.fin == 4 || FrmParam.fin == 0)
                     {
                         Resultat frmR = new Resultat();
                         frmR.Show(this);
                     }
                 }
             }
+            ia.UpdateGrille(PartieSuivante);
         }
 
         private void TailleM_Load(object sender, EventArgs e)
@@ -90,6 +100,15 @@ namespace Puissance_4_Groupe_B
                 this.BackColor = Color.White;
                 lblJ1.ForeColor = Color.Black;
                 lblJ2.ForeColor = Color.Black;
+            }
+            PictureBox[,] GrilleJeu = { { pic00, pic01, pic02, pic03, pic04, pic05, pic06 }, { pic10, pic11, pic12, pic13, pic14, pic15, pic16 }, { pic20, pic21, pic22, pic23, pic24, pic25, pic26 }, { pic30, pic31, pic32, pic33, pic34, pic35, pic36 }, { pic40, pic41, pic42, pic43, pic44, pic45, pic46 }, { pic50, pic51, pic52, pic53, pic54, pic55, pic56 } };
+
+            for (int i=0; i <6; i++)
+            {
+                for(int j = 0; j <7; j++)
+                {
+                    GrilleJeu[i, j].MouseClick += RecupCooPictureBox;
+                }
             }
         }
 

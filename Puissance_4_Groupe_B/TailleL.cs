@@ -16,10 +16,12 @@ namespace Puissance_4_Groupe_B
         internal Couleurs FrmParam;
         internal Grille PartieSuivante;
         internal bool mode_sombre;
+        internal IA ia;
 
         public TailleL()
         {
             InitializeComponent();
+            ia = new IA(PartieSuivante);
         }
 
         private void Jeu_Load(object sender, EventArgs e)
@@ -49,27 +51,56 @@ namespace Puissance_4_Groupe_B
 
         private void Coup(int c)
         {
+            ia.UpdateGrille(PartieSuivante);
             Couleurs FrmParam = (Couleurs)this.Owner;
             System.Drawing.Bitmap pionJ1 = FrmParam.Pions_Basique[FrmParam.pion1];
             System.Drawing.Bitmap pionJ2 = FrmParam.Pions_Basique[FrmParam.pion2];
-            PictureBox[,] GrilleJeu = { { pic00, pic01, pic02, pic03, pic04, pic05, pic06, pic07, pic08 }, { pic10, pic11, pic12, pic13, pic14, pic15, pic16, pic17, pic18 }, { pic20, pic21, pic22, pic23, pic24, pic25, pic26, pic27, pic28 }, { pic30, pic31, pic32, pic33, pic34, pic35, pic36, pic37, pic38 }, { pic40, pic41, pic42, pic43, pic44, pic45, pic46, pic47, pic48 }, { pic50, pic51, pic52, pic53, pic54, pic55, pic56, pic57, pic58 }, { pic60, pic61, pic62, pic63, pic64, pic65, pic66, pic67, pic68 } };
+            PictureBox[,] GrilleJeu = { { pic00, pic01, pic02, pic03, pic04, pic05, pic06 ,pic07 , pic08}, { pic10, pic11, pic12, pic13, pic14, pic15, pic16, pic17, pic18 }, { pic20, pic21, pic22, pic23, pic24, pic25, pic26, pic27, pic28 }, { pic30, pic31, pic32, pic33, pic34, pic35, pic36, pic37, pic38 }, { pic40, pic41, pic42, pic43, pic44, pic45, pic46, pic47, pic48 }, { pic50, pic51, pic52, pic53, pic54, pic55, pic56, pic57, pic58 },{ pic60, pic61, pic62, pic63, pic64, pic65, pic66, pic67, pic68 } };
             if (PartieSuivante.case_la_plus_basse(c) >= 0)
             {
                 if (PartieSuivante.get_Tour())
                 {
+
                     GrilleJeu[PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ1;
+                    FrmParam.fin = PartieSuivante.coup(c);
+                    if (FrmParam.fin == 4 || FrmParam.fin == 0)
+                    {
+                        Resultat frmR = new Resultat();
+                        frmR.Show(this);
+                    }
                 }
                 else
                 {
-                    GrilleJeu[PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ2;
+                    if (PartieSuivante.get_Nb_Joueurs() == 2)
+                    {
+
+                        GrilleJeu[PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ2;
+                        FrmParam.fin = PartieSuivante.coup(c);
+                        if (FrmParam.fin == 4 || FrmParam.fin == 0)
+                        {
+                            Resultat frmR = new Resultat();
+                            frmR.Show(this);
+                        }
+                    }
                 }
-                int fin = PartieSuivante.coup(c);
-                if (fin != 0)
+                PartieSuivante.update_case_basse(c);
+
+                if (PartieSuivante.get_Nb_Joueurs() == 1 && FrmParam.fin != 4)
                 {
-                    Resultat frmR = new Resultat();
-                    frmR.Show(this);
+                    Random random = new Random();
+                    int coupAJouer = ia.JouerUnCoupFictif(6, PartieSuivante.get_Tour(), random.Next(PartieSuivante.get_Colonnes()), 1);
+                    FrmParam.fin = PartieSuivante.coup(coupAJouer);
+
+                    GrilleJeu[PartieSuivante.case_la_plus_basse(coupAJouer), coupAJouer].BackgroundImage = pionJ2;
+                    PartieSuivante.update_case_basse(coupAJouer);
+                    if (FrmParam.fin == 4 || FrmParam.fin == 0)
+                    {
+                        Resultat frmR = new Resultat();
+                        frmR.Show(this);
+                    }
                 }
             }
+            ia.UpdateGrille(PartieSuivante);
         }
 
         private void TailleL_FormClosed(object sender, FormClosedEventArgs e)
@@ -107,6 +138,26 @@ namespace Puissance_4_Groupe_B
             }
             colonne -= 1;
             Coup(colonne);
+        }
+
+        private void lblJ2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picJ2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picJ1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

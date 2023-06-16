@@ -12,10 +12,10 @@ namespace Jeu
         private int Nb_Joueurs = 1;
         private List<string> Nom_Joueurs = new List<string>();
         private int[,] grille;
-        private int[] case_basse;
+        public int[] case_basse;
         private int Lignes;
         private int Colonnes;
-        private bool Tour;
+        private bool Tour; // True = J1 
         private bool Partie_finie = false;
 
         public Grille(int l, int c)
@@ -220,6 +220,7 @@ namespace Jeu
         {
             int k = 1;
             int Pion_Align = 1;
+            int dernierPion_Align = 0;
             int deb_L = l - 3;
             int fin_L = l + 3;
             int deb_C = c - 3;
@@ -246,7 +247,7 @@ namespace Jeu
             {
                 if (grille[l, c] == grille[l + 1, c] && grille[l + 1, c] == grille[l + 2, c] && grille[l + 2, c] == grille[l + 3, c])
                 {
-                    return 1;
+                    return 4;
                 }
             }
             //Verification Horizontale
@@ -275,10 +276,9 @@ namespace Jeu
                     k += 3;
                 }
             }
-            if (Pion_Align >= 4)
+            if (Pion_Align > dernierPion_Align)
             {
-                Partie_finie = true;
-                return 1;
+                dernierPion_Align = Pion_Align ;
             }
 
             //Verification Oblique Montant
@@ -311,10 +311,9 @@ namespace Jeu
                     k += 3;
                 }
             }
-            if (Pion_Align >= 4)
+            if (Pion_Align > dernierPion_Align)
             {
-                Partie_finie = true;
-                return 1;
+                dernierPion_Align = Pion_Align;
             }
 
             //Verification Oblique Descendant
@@ -347,17 +346,17 @@ namespace Jeu
                     k += 3;
                 }
             }
-            if (Pion_Align >= 4)
+            if (Pion_Align > dernierPion_Align)
             {
-                Partie_finie = true;
-                return 1;
+                dernierPion_Align = Pion_Align;
             }
+
             if (Nb_Coups_Jouer == ( Lignes+1 ) * ( Colonnes+1 ) )
             {
                 Partie_finie = true;
-                return -1;
+                return 0;
             }
-            return 0;
+            return  dernierPion_Align;
         }
 
         /// <summary>
@@ -371,12 +370,15 @@ namespace Jeu
             if (case_basse[c] != -1)
             {
                 pose_pion(c);
-                update_case_basse(c);
+                verif = verification(case_basse[c], c);
                 ProchainTour();
             }
             return verif;
         }
 
+
+
+        /* 
         /// <summary>
         /// Fait jouer l'IA
         /// </summary>
@@ -572,5 +574,6 @@ namespace Jeu
 
             return -1; // Aucune ligne vide trouvée dans la colonne
         }
+        */
     }
 }

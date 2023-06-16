@@ -16,10 +16,12 @@ namespace Puissance_4_Groupe_B
         internal Couleurs FrmParam;
         internal Grille PartieSuivante;
         internal bool mode_sombre;
+        IA ia;
 
         public TailleS()
         {
             InitializeComponent();
+            ia = new IA(PartieSuivante);
         }
 
         private void TailleS_Load(object sender, EventArgs e)
@@ -49,6 +51,7 @@ namespace Puissance_4_Groupe_B
 
         private void Coup(int c)
         {
+            ia.UpdateGrille(PartieSuivante);
             Couleurs FrmParam = (Couleurs)this.Owner;
             Bitmap pionJ1 = FrmParam.Pions_Basique[FrmParam.pion1];
             Bitmap pionJ2 = FrmParam.Pions_Basique[FrmParam.pion2];
@@ -57,19 +60,47 @@ namespace Puissance_4_Groupe_B
             {
                 if (PartieSuivante.get_Tour())
                 {
+
                     GrilleJeu[PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ1;
+                    FrmParam.fin = PartieSuivante.coup(c);
+                    if (FrmParam.fin == 4 || FrmParam.fin == 0)
+                    {
+                        Resultat frmR = new Resultat();
+                        frmR.Show(this);
+                    }
                 }
                 else
                 {
-                    GrilleJeu[PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ2;
+                    if (PartieSuivante.get_Nb_Joueurs() == 2)
+                    {
+
+                        GrilleJeu[PartieSuivante.case_la_plus_basse(c), c].BackgroundImage = pionJ2;
+                        FrmParam.fin = PartieSuivante.coup(c);
+                        if (FrmParam.fin == 4 || FrmParam.fin == 0)
+                        {
+                            Resultat frmR = new Resultat();
+                            frmR.Show(this);
+                        }
+                    }
                 }
-                int fin = PartieSuivante.coup(c);
-                if (fin != 0)
+                PartieSuivante.update_case_basse(c);
+
+                if (PartieSuivante.get_Nb_Joueurs() == 1 && FrmParam.fin != 4)
                 {
-                    Resultat frmR = new Resultat();
-                    frmR.Show(this);
+                    Random random = new Random();
+                    int coupAJouer = ia.JouerUnCoupFictif(6, PartieSuivante.get_Tour(), random.Next(PartieSuivante.get_Colonnes()), 1);
+                    FrmParam.fin = PartieSuivante.coup(coupAJouer);
+
+                    GrilleJeu[PartieSuivante.case_la_plus_basse(coupAJouer), coupAJouer].BackgroundImage = pionJ2;
+                    PartieSuivante.update_case_basse(coupAJouer);
+                    if (FrmParam.fin == 4 || FrmParam.fin == 0)
+                    {
+                        Resultat frmR = new Resultat();
+                        frmR.Show(this);
+                    }
                 }
             }
+            ia.UpdateGrille(PartieSuivante);
         }
 
         private void RecupCoo(object sender, MouseEventArgs e)
@@ -107,6 +138,16 @@ namespace Puissance_4_Groupe_B
         private void TailleS_FormClosed(object sender, FormClosedEventArgs e)
         {
             FrmParam.Show();
+        }
+
+        private void picJ1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
